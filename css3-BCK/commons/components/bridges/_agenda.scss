@@ -1,0 +1,281 @@
+/*Agenda*/
+/*align print icon*/
+.appointment_module_tab_content{width:$default-width; display:table;padding-bottom:0;}
+
+.appointment_module_tab_content .action_icons {top: 1.3em;}
+
+.appointment_module_tab_content .border_list {
+  padding: 30px;
+}
+
+.agenda_resultpage .action_icons{top:1.2em;right:31px;}
+.appointment_list .border_list{padding-top:0;}
+
+.print_icon {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.expandable.dropdown_arrow {
+  cursor: pointer;
+  position: relative;
+}
+.appointment_list .action_btns {
+  border: 0 none;
+  padding: 10px 0 15px;
+}
+.appointment_list .list:first-child{border-top:1px solid #d8dbde;}
+
+.appointment_list .dropdown_arrow::after{right:0;}
+
+.addappoinment .locked {
+  display: none;
+}
+
+.date_block {
+  position: relative;
+}
+
+.date_block__inner {
+  display: table;
+  width: $default-width;
+}
+
+.date_block_col1 {
+  float: left;
+}
+
+.date_block_col2 {
+  margin: 0 0 0 315px;
+}
+
+.date_block__inner .date_block_col1 .datepicker {
+  width: 300px;
+  border: 1px solid #d8dbde;
+}
+
+.display_time {
+  border: 1px solid #d8dbde;
+  width: $default-width;
+}
+
+.date_selection {
+  border-bottom: 3px solid #d8dbde;
+  margin: 0 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.agenda_date_block {
+  position: relative;
+}
+
+.agenda_date_block .form_details{
+    width: $default-width;
+}
+
+.agenda_date_overlay {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 20%/100%);
+  height: $default-height;
+  position: absolute;
+  top: 0;
+  width: $default-width;
+}
+
+.selecteddate {
+  height: 245px;
+  padding: 15px;
+  .select_inner, .noslotavailable {
+    text-align: center;
+  }
+}
+
+/*Added to increase the fontcon size*/
+
+.select_inner p.fontcon-clock, .noslotavailable p.fontcon-emotion-unhappy {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.spacesradio {
+  height: 215px;
+  overflow-y: scroll;
+}
+
+.radiospaces > {
+  input {
+    float: left;
+  }
+  label {
+    display: block;
+    margin-left: 20px;
+  }
+}
+
+.select_inner, .noslotavailable {
+  padding: 10px 0;
+}
+
+.time_list {
+  margin-bottom: 10px;
+  input {
+    vertical-align: top;
+    margin-right: 4px;
+  }
+}
+
+.time_list_seperator {
+  border-bottom: 1px solid #d8dbde;
+  margin: 0px 0 12px;
+}
+
+.app_list_info {
+  padding-bottom: 20px;
+}
+
+.modified_details {
+  padding: 10px 0;
+}
+
+.confirmation_check {
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+}
+
+.remainder_checkbox {
+  .default_input_field {
+    display: inline-block;
+    width: 228px;
+  }
+  .field_country_code {
+    width: 57px;
+  }
+}
+
+.reminder_check {
+  float: left;
+  margin: 12px 10px 0 0;
+}
+
+.reminder_info {
+  margin-bottom: 10px;
+}
+.reminder_check p {
+	float:none;
+	}
+	
+.required_field {
+	padding:1.87em 0 0 1.87em;
+	}
+	
+.agenda_resultpage .list_details:first-child, .agenda_confirmation .list_details:first-child {
+	padding-top:0;
+	}
+	
+.appointment_details_info {
+	padding:1.87em 1.87em 0 1.87em;
+	}
+	
+.list_details label:last-child {
+	padding-left:0.35em;
+	}
+	
+.agenda_confirmation .listitem_details label:nth-last-child(-n+2) ,.agenda_resultpage .listitem_details label:nth-last-child(-n+2){
+	@include light;
+	}
+.printdiv {
+  .details_label {
+    width: 20%;
+    float: left;
+  }
+  .listitem_details {
+    float: left;
+    width: 50%;
+    padding: 0;
+    @include light;
+  }
+}
+.print .branch_locator .lnk_primary {
+	color:#009966;
+	}
+
+@media all and (max-width: $screen-sm-max) {
+  .appointment_module_tab_content .border_list {
+    padding: 10px;
+  }
+  .appointment_list .action_btns {
+    padding: 15px 0;
+  }
+  .date_block_col2 {
+    width: $default-width;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .date_block_col2 {
+    clear: both;
+    margin: 0;
+    padding-top: 30px;
+    width: 300px;
+  }
+}
+
+.nochanges-popup, .confirm-popup {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #cccccc;
+  display: none;
+  font-size: 20px;
+  height: 183px;
+  left: 50%;
+  margin: -80px 0 0 -150px;
+  padding: 43px 20px 0;
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  z-index: 2;
+}
+
+.date_booked.day:after, .date_dayoff.day:after {
+  background: none repeat scroll 0 0 #fff;
+  content: "";
+  height: 37px;
+  left: 20px;
+  position: absolute;
+  top: -1px;
+  transform: skewX(-49deg);
+  -moz-transform: skewX(-49deg);
+  -webkit-transform: skewX(-49deg);
+  width: 2px;
+}
+
+.date_booked.day:before, .date_dayoff.day:before {
+  border: 1px solid #d8dbde;
+  content: "";
+  height: 37px;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: 44px;
+}
+
+.date_booked.day {
+  background: none repeat scroll 0 0 #f00 !important;
+  position: relative;
+  color: #000 !important;
+}
+
+.date_dayoff.day {
+  background: none repeat scroll 0 0 #0072ba !important;
+  position: relative;
+  color: #000 !important;
+}
+
+td {
+  &.selected {
+    background: #009e83 !important;
+  }
+  &.service_highlight {
+    color: #e53012 !important;
+  }
+}

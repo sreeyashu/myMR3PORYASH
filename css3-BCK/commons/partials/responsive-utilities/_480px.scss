@@ -1,0 +1,46 @@
+
+/* Breakpoint 479 */
+@media all and (max-width: $screen-xs-max) {
+	.identification_ucr .right_navigation_btn, 
+	.identification_contract .right_navigation_btn {
+	  width: auto;
+	}
+	// Login buttons & text 
+	.intermediate_btns .plain_text {
+		width: 100%;
+		display: block;
+		margin: 0 0 0.5em 0;
+		line-height: 20px;
+	}
+	.login_bg {
+	  .alert_message_content {
+	    width: 80%;
+	    padding-right: 0.87em;
+	  }
+	}
+	// SEPA CT Form
+	.selected-item {
+		font-size: 0.75em;
+	} 
+}
+
+
+
+/* Breakpoints 480-767 */
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	// Static pages
+	.login_bg {
+	  .content_page {
+	    margin: 1.25em auto 1.87em;
+	  }
+	  .severity_message .alert_messages {
+	    width: 100%;
+	    margin: 1.25em auto 0 auto;
+	  }
+	}
+}
+
+/* Breakpoints 480-1023 */
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  
+}

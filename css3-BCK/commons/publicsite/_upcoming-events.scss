@@ -1,0 +1,45 @@
+/* Upcoming Events Starts */
+
+.upcoming_event {
+  .block_inner {
+    padding: 1.5625em;
+  }
+  .detail_block span.block_special {
+    background: $primarycolor;
+    color: unquote($white-clr);
+  }
+  p {
+    padding-top: 0.9375em;
+  }
+  h3 {
+    @include regular;
+    font-size: 1.25em;
+    padding-top: 1em;
+    color: $primarytxtcolor;
+  }
+  .detail_inner.active h3 {
+    color: unquote($white-clr);
+  }
+}
+
+/* Upcoming Events Ends */
+@media (max-width: 1023px) {
+  /* Upcoming Events Starts */
+  .upcoming_event .block_inner {
+    padding: 1.25em;
+  }
+  /* Upcoming Events Ends */
+}
+
+@media (max-width: 767px) {
+  /* Upcoming Events Starts */
+  .column_44.section .detail_block {
+    margin-bottom: 0.5em;
+  }
+  .upcoming_event .block_inner {
+    padding: 1.75em;
+  }
+  /* Upcoming Events Ends */
+}
+
+@media (max-width: 480px) {}

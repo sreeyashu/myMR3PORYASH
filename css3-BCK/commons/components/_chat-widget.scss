@@ -1,0 +1,318 @@
+/* common styles */
+.f_left{
+	 float:left;
+}
+.f_right{
+	 float:right;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block!important;
+}
+
+
+.chat_window {
+  /* changed */
+  line-height: 1.3em;
+  width: 25.16em;
+  margin: 1.57em auto 3.95em;
+  border: 0.08em solid $chat-win-border;
+  font-size: 0.8em;
+}
+
+/* header */
+
+.h_services {
+  background: $chat-h-services;
+  /* changed */
+}
+
+.chat_header {
+  padding: 1.25em 0.94em;
+  color: $chat-out-txt;
+  /* changed */
+}
+
+.chat_header_icons span {
+  display: inline-block;
+  font-size: 1em;
+  margin-left:0.5em;
+  cursor: pointer;
+}
+
+.alert {
+  /* changed */
+  padding: 0.94em .94em 0;
+  color: $error-clr;
+  background: $chat-alert-bg-clr;
+}
+
+.chat_body_inner {
+  background: $chat-bg-clr;
+  padding: 1.4em 0.94em 0.94em;
+}
+
+/* information blocks */
+
+.chat_info {
+  text-align: center;
+}
+
+.h_l1 {
+  font-family: $chat-font;
+  text-transform: uppercase;
+  margin-bottom: 0.94em;
+}
+
+.d_l1 {
+  color: $description-clr;
+  font-size: 0.9em;
+  margin-bottom: 1.56em;
+}
+
+/* form block */
+
+.form_row {
+  margin-bottom:1.17em;
+  label {
+    font-family: $chat-font;
+    padding-bottom: .4em;
+    display: block;
+  }
+  .default_input {
+    border: 1px solid $default-border-clr;
+    background: $white-bg;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+    height: 2.75em;
+    @include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+    /*padding: 0px 12px;*/
+    > input {
+      width: 100%;
+      height: 2.75em;
+      background: none !important;
+      padding: 0.7em 0px;
+      max-height: none !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      text-indent: 0 !important;
+      border: 0 none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      line-height: 1.4;
+      color: $default-color-input;
+      font-family: $chat-font;
+    }
+  }
+}
+
+.default_text_area {
+  width: $default-width;
+  textarea {
+    border: 1px solid $default-border-clr;
+    font-size: 1em;
+    color: $default-color-input;
+    width: $default-width;
+    resize: none;
+    padding: 11px 12px;
+    /* to maintain the standard space between the input  */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: $radius;
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -webkit-appearance: none;
+    font-family: $chat-font;
+    @include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+    &:focus {
+      border-color: $default-border-clr;
+    }
+  }
+}
+
+/* loading */
+
+.chat_loading {
+  font-size: 2em;
+}
+
+.chat_loader {
+	background: url(images/animgif.gif) no-repeat center center;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	}
+
+/* custom check box */
+/* custom checkbox and radio button */
+
+input {
+  &[type=checkbox].css-checkbox, &[type=radio].css-checkbox {
+    position: absolute;
+    z-index: -1000;
+    top: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    margin-top: 0;
+  }
+  &[type=checkbox].css-checkbox + label.css-label, &[type=radio].css-checkbox + label.css-label {
+    padding-left: 1.375em;
+    display: inline-block;
+    line-height: 1;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    min-height: 1em;
+  }
+  &[type=checkbox].css-checkbox:checked + label.css-label:after {
+    font-family: 'bnpiconfont';
+    content: "\e614";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.875em;
+  }
+  &[type=radio].css-checkbox:checked + label.css-label:after {
+    font-family: 'bnpiconfont';
+    content: "\e63f";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.875em;
+  }
+}
+
+label.css-label {
+  &:before {
+    font-family: 'bnpiconfont';
+    content: "\e63c";
+    color: $chat-label;
+    background: white;
+    position: absolute;
+    left: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.875em;
+    box-shadow: inset 0 0 6px $chat-label-box;
+    top: 2px;
+  }
+  &.radio:before {
+    content: "\e63e";
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Button */
+
+.btn_default {
+  min-width: 90px;
+  height: $ele-height;
+  /*changed*/
+  padding: 0 1em;
+  font-size: 1em;
+  font-family: Tahoma,arial,helvetica,swiss,sans-serif;
+  line-height: 1em;
+  cursor: pointer;
+  margin: 12px 0 0;
+  text-align: center;
+  width: 100%;
+  border: 0;
+ @include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.btn_primary,.btn_secondary {
+  background: url(images/inputbg.jpg) repeat-x left top;
+  /*changed*/
+  color: $white-clr-primary;
+  &:hover {
+    /*changed*/
+  }
+}
+
+/* chat message */
+
+.chat_typing {
+  background: $chat-type-clr;
+  margin-bottom: .8em;
+  padding: .32em 1.25em;
+  font-family: $chat-font;
+  position: relative;
+  left: 0.94em;
+  width:20em;
+}
+
+.chat_list {
+  min-height: 7.85em;
+  max-height: 15.65em;
+  overflow-y: scroll;
+  margin-bottom: 1em;
+  padding-right: .94em;
+  min-width: 24.7em;
+}
+
+.chat_holder {
+  margin-bottom: .78em;
+  padding: .78em;
+ @include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+ p{
+ 	word-wrap: break-word;
+ }
+  p:first-child {
+    font-family:$chat-font;
+  }
+}
+
+.chat_in {
+  background: $chat-in-bg;
+  margin-right: 1.17em;
+}
+
+.chat_out {
+  /* changed */
+  background: $chat-out-bg;
+  color: $chat-out-txt;
+  margin-left: 1.17em;
+}
+
+.chat_time {
+  background: $chat-time-bg;
+  padding: .78em .78em 0;
+  margin: 0 auto 1.56em;
+  width: 70%;
+  p {
+    padding-bottom: .78em;
+    span {
+      padding: 0 0.08em;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+// Btn Alignment
+
+.navigation_btns, .details_navigation {
+ width: $default-width;
+	display: table;
+}
+.right_navigation_btn {
+	text-align: right;
+}
+.left_navigation_btn {
+	text-align: left;
+}
+/*.left_navigation_btn, .right_navigation_btn {
+	display: table;
+}*/
+
+.right_navigation_btn .action_content_icons{
+	float: left;	
+}
+
+.standing_order .right_navigation_btn .action_icons__global span {
+	padding-right: 0.62em;
+}
+	
+// Button default class 
+// --------------------
+.btn_default {
+	@include ele-btn(5.625em, 2.75em, 0, 1.25em);
+	font-size: 1em;
+ 	@include regular;
+	line-height: 1em;
+	cursor: pointer;
+	margin: 0 0.57em 0 0;
+	text-align: center;
+	@include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+	-webkit-transition-duration: 0.4s;
+  	transition-duration: 0.4s;
+  	-webkit-transition-property: color, background-color;
+  	transition-property: color, background-color;
+	&:first-child {
+	 	margin: 0;
+	}
+}
+a.btn_default {
+	display: inline-block;
+	padding: 0.87em 1.25em;
+}
+.btn_disabled{cursor: auto !important; -moz-opacity: 0.6;-webkit-opacity: 0.6;  opacity: 0.6;}
+
+// Primary and secondary
+// ---------------------
+.btn_primary, .btn-primary {
+		 background-color: $primary-btn-clr;
+		 color: unquote($white-clr-primary);
+	 .btn_right {
+		 color: unquote($white-clr-primary);
+		 line-height: 0;
+		 position: relative;
+		 top: 0.13em;
+		 margin-left: 0.63em;
+	}
+	 &:hover {
+	 	background-color: $hover-bg;
+	 }
+	 &:focus {
+	 	outline: none;
+	 }
+	 &.btn_disabled:hover {
+		  background-color: $primary-hover-clr;
+		}
+}
+.btn_secondary, .btn-secondary {
+ 	background-color: $secondary-btn-clr;
+	 &:hover {
+	 	background-color: $secondary-btn-hover-clr;
+	}
+	 &:focus {
+	 	outline: none;
+	}
+	&.btn_disabled:hover {
+	  background-color: $secondary-btn-clr;
+	}
+}
+.btn-sm :focus{
+outline: none;
+}
+
+// Alternative BTNS
+// -----------------
+.btn_primary2{ 
+	background:$primary2-btn-clr;
+	color:unquote($white-clr);
+	&:hover{
+		background:$primary2-btn-hover;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+
+// Btn with arrow
+// --------------
+.btn_arrow_left{
+	padding-left:0.95em;
+}
+.btn_arrow_right {
+	padding-right: 0.95em;
+}
+.arrow_left{
+	line-height: 0;
+	position: relative;
+	top: 0.13em;
+	margin-right: 0.63em;
+}
+.arrow_right {
+ 	color: unquote($white-clr-icon);
+	line-height: 0;
+	position: relative;
+	top: 0.13em;
+	margin-left: 0.63em;
+}
+
+// To make it generic to all buttons and link buttons in logout page
+.msie button.btn_default:before, .msie a.btn_default:before, .msie button.btn_profile:before{
+	content: "" ;
+	display: block;
+	min-width: 90px ;
+}
+
+
+//Full width btns
+
+.fullwidth_btn{
+  width:$default-width; text-align:center;	
+  button{ width:$default-width;}
+}
+.fullwidth_lnk{ 
+	width:100%; text-align:center;
+	.lnk_primary{ width:$default-width;}
+}
+.lnk_center{ 
+	width:auto; margin:0 auto;padding:0.87em 0; display:table;
+	.lnk_primary{ padding:0;}
+}
+
+//Revisit
+.btn_default_bg {
+ background: unquote($white-bg);
+	margin: 0;
+}
+.btn_inactive_bg {
+	opacity: 0.3;
+}
+.btn_active_bg {
+	opacity: 1;
+}
+.btn_default_bg:hover {
+ @include color-rgba(255, 255, 255,80%/100%);
+}
+
+// Content based button & Link ex:zoomit
+.content_btns {
+	padding: 0.62em 0 0.5em 0;
+ 	border-top: 1px solid $default-border-clr;;
+}
+.view_more_lnk {
+	font-size: 0.87em;
+	position: relative;
+	top: 1px;
+}
+
+// 479
+
+@media all and (max-width: 29.9375em) {
+	.right_navigation_btn {
+		width: 100%;
+		margin: 0;
+		.btn_default {
+			width: 100%;
+			margin: 0;
+			margin-bottom: 0.62em;
+		}
+		.action_content_icons {
+			float: right;
+		}
+	}
+	 .left_navigation_btn {
+	  	width: 100%;
+	  	margin: 0;
+	  	.btn_default {
+			width: 100%;
+			margin: 0;
+	  	}
+	 }
+	 /*.btn_arrow_right, .arrow_left{
+	 	padding-right:1.25em;
+	 }*/
+	 .load_btn .btn_default {
+			width: 94%;
+	}
+}
+
+//to remove outline in touch devices
+
+.touch button{
+	outline: none;
+}
+
+

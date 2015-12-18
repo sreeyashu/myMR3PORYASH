@@ -1,0 +1,80 @@
+/* Contact us styles starts */
+
+.contactus_wrapper {
+  position: relative;
+  width: $default-width;
+  display: table;
+}
+
+.contactus_heading {
+  display: table;
+  width: $default-width;
+  h2 {
+    font-size: 4.375em;
+    color: unquote($white-clr);
+    margin: 0.5143em 0;
+    padding: 0.1429em;
+    background: rgba(0, 0, 0, 0.8);
+    float: left;
+ }
+}
+
+.contact_us .card_item {
+  bottom: 0;
+}
+
+.contactus_col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.contactus_details {
+  background:unquote($white-bg);
+}
+
+.contactus_container .header_bg_banner {
+  background-image: url("/rsc/contrib/graphicaltheme/pws/images/contact_us_banner.jpg");
+  min-height: 12.3125em;
+}
+.contactus_wrapper .card_slide .block_btn {
+  background:unquote($white-bg);
+}
+
+.contact_us .card_slide .block_btn {
+  margin-top: 0;
+}
+
+/* Contact us styles ends */
+@media (max-width: 1023px) {}
+
+@media (max-width: 767px) {
+  /* Contact us styles starts */
+  .contact_us .card_slide .block_btn {
+    padding: 36px 6.5%;
+  }
+  .contactus_details {
+    margin-right: 0px;
+  }
+  .contactus_heading h2 {
+    margin-left: 0.28em;
+    font-size: 3.125em;
+    line-height: 1.25em;
+  }
+  .contactus_col {
+    position: relative;
+  }
+  /* Contact us styles ends */
+}
+
+@media (max-width: 480px) {
+  /* Contact us styles starts */
+  .contact_us {
+    .card_slide .block_btn {
+      padding: 10px;
+    }
+    .contactus_container .block_inner {
+      padding: 0;
+    }
+  }
+  /* Contact us styles ends */
+}

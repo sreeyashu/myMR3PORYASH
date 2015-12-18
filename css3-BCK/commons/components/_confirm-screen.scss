@@ -1,0 +1,66 @@
+.ucr_highlight p {
+	 color: $highlight-clr;
+	 @include regular;
+}
+ .amount_highlight {
+	 color: $highlight-clr;
+}
+.confirmation_details__amount {
+ 	width: $default-width;
+	display: table;
+	padding-bottom: 8px;
+}
+.confirm_amount .amount_highlight {
+	margin-right: 0px;
+}
+.alias_name {
+ 	color: $select-color;
+	display: table;
+	/*padding-top: 0.25em;*/
+	 label {
+	 	float: left;
+	}
+}
+.space_right {
+	margin-right: 0.25em;
+}
+.space_left {
+	margin-left: 0.25em;
+}
+.space_top {
+	margin-top: 0.25em;
+}
+.space_bottom {
+	margin-bottom: 0.25em;
+}
+
+
+.exp_btn {
+	margin-right: 0.62em;
+}
+.exp_lnk {
+	padding: 0.85em 0;
+	text-align: center;
+}
+/*Specific to save beneficiary done icon in STO. Can be used in places of similar requirement*/
+.done_item{
+       color: #85b909;
+	   display:inline-block;
+       margin:2px 6px 0 0;
+   }
+
+ 
+.done_align{ 
+	font-size:1.562em;
+}
+.reload_align{ 
+	color: #85b909; 
+	font-size: 2.19em; 
+	position: relative;  
+	right: 1.25em; 
+	background:unquote($white-clr); 
+	border-top-left-radius:1em; 
+	border-top-right-radius:1em;  
+	border-bottom-left-radius:1em;  
+	border-bottom-right-radius:1em;
+}

@@ -1,0 +1,206 @@
+/*Slr*/
+
+.sub_info{
+	.header_xtrInformation {
+	  font-size: 0.75em;
+	  margin-left: 2.5em;
+	  &:first-child{
+	  	margin-left:0;
+	  }
+	}
+}
+.tableContent_header {
+  position: relative;
+  margin-bottom: 0.9375em;
+}
+
+
+// ECA Page headers plain
+.content_title{
+	margin-bottom:1.875em;
+	h2{
+		font-size:1.625em;
+		line-height:1;
+	}
+}
+
+// Sticky btns with container handling
+.btn_sticky{ 
+	&.scroll_box{
+		padding-bottom:5em;
+	}
+	.action_btns{
+		position:fixed;
+		bottom:0;
+		max-width:80em;
+		background-color:#ffffff;
+		left:auto;
+		box-shadow:#76767B 0px -3px 30px -8px;
+		z-index:999;
+	}
+}
+
+.table_icon{
+	font-size:1.12em;
+	cursor:pointer;
+}
+.icon_done{
+	font-size:0.875em;
+	color:#85b909;
+}
+.icon_notdone{
+	font-size:0.875em;
+	color: #e53012;
+}
+
+
+
+
+
+
+
+
+
+.form_group_title{
+	@include regular;
+	padding-bottom:0.9375em;
+	font-size:1.25em;
+}
+.two_column{
+	.form_group_title{
+		border-bottom:1px solid #d8dbde;
+		margin-bottom:0.9375em;
+	}
+}
+
+
+.content_title{ margin-bottom:1.875em;}
+
+
+.content_inner{
+	padding:1.875em;
+}
+
+
+
+.overviewdetails{
+	background-color:#e5e9ef;
+	margin-bottom:1.25em;
+	border:1px solid #d8dbde;
+}
+
+
+
+
+/* certificate */
+.content_group_title{margin-bottom:1.562em;@include regular;font-size:1.25em;}
+.content_group{ 
+	padding-bottom:1.875em; 
+	margin-bottom:1.875em; 
+	border-bottom:1px solid #d8dbde; 
+	display:table; 
+	width:100%;
+	&:nth-last-of-type(1){
+		padding-bottom:0; 
+		margin-bottom:0; 
+		border:none;
+	}	
+}
+.three_column{
+	.inline_column{ 
+		width:33.333333333%; 
+		float:left; 
+		padding-right:0.3125em; 
+		padding-left:0.3125em;
+		&:nth-of-type(1){
+			padding-left:0;
+		}
+		&:nth-last-of-type(1){
+			padding-right:0;
+		}
+	}
+}
+.two_column{
+	.inline_column{ 
+		width:50%; 
+		float:left; 
+		padding:0 0.3125em;
+		&:nth-of-type(1){
+			padding-left:0;
+		}
+		&:nth-last-of-type(1){
+			padding-right:0;
+		}
+	}
+	.details_inner{
+		&:nth-of-type(1){
+			.list_details:nth-child(1){
+				padding-top:0;
+			}
+		}
+	}
+	.details_label{ 
+		width:50%;
+	}
+	.listitem_details{
+		width:50%;
+	}
+}
+
+
+@media (max-width: $screen-sm-max){
+	.content_inner{
+		padding:0.62em;
+	}
+}
+
+@media all and (max-width: $screen-md-max){
+	.portal_wrapper.eca {
+	  font-size: 0.75em !important;
+	  line-height: 0.875em;
+	 }
+}
+
+.edit_lnk{
+	color:$primarycolor;
+	outline:0;
+}
+.edited_lnk{
+	color:#f66900;
+	.edit{
+		color:$primarycolor;
+	}
+}
+
+.edit{
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 1px dotted #252429;
+	cursor:pointer;
+	position:absolute;
+}
+
+
+//Temp
+.glyphicon-ok{
+	font-size:0.84em;
+	display:table-cell;
+	&:before{
+	  font-family: 'bnpiconfont';
+	  content: "\e614";
+	}
+}
+.glyphicon-remove{
+	font-size:0.84em;
+	display:table-cell;
+}
+
+// Bootstrap button override
+.eca .btn-sm{ padding: 0.5625em;
+  cursor: pointer;
+  height:2.5em;}
+.editable-cancel{
+ background-color: #bec6d0;
+}
+
+.overlay_title{font-size:1.5em;}

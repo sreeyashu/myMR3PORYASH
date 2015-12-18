@@ -1,0 +1,45 @@
+.top_header{
+	background-color: #3a3a3a;/*#004e90*/
+	width:100%;
+
+}
+.top_header_inner{ 
+	display:table;
+	width:100%;
+	max-width:80em;
+	margin:0 auto;
+	padding:0 1.875em;
+}
+
+.select_item{ 
+	display:inline-block; 
+	margin-right:0.625em;
+	> li{
+		display:inline-block;
+		cursor:pointer;
+		margin-left:1.625em;
+		padding:0.688em 0;
+		> a {
+			color:#ffffff;
+			font-size:0.8125em;
+		}
+		&.active, &:hover{
+			border-top: 3px solid #009966;
+			padding-top: 0.48em;
+		}
+		&:first-child{
+			margin-left:0;
+		}
+	}
+	&.lng_change{
+		> li{
+			margin-left:0.625em;
+		}
+	}
+}
+
+@media all and (max-width:1023px){
+	.top_header{
+		display:none;
+	}
+}

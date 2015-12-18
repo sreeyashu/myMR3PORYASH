@@ -1,0 +1,317 @@
+
+/* common styles */
+html {    
+    -ms-content-zooming: none;
+    -webkit-touch-callout: none !important;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* currently adding this style to hide header */
+/* need to remove it once new navigation is ready */
+/* start */
+.portal_wrapper.grid .site_header {
+  display: none;
+}
+/* end */
+
+
+.col {
+  h1, h2 {
+    @include cond-regular;
+  }
+}
+
+.container_fluid {
+    margin: 0 auto;
+    max-width: 80em;
+    padding: 0 2.156em;
+    float: none;    
+}
+
+.row {
+  margin-bottom: 1.563em;
+}
+
+.solid_block {
+  background: unquote($white-bg);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+.noscroll {
+  overflow: hidden;
+  width: $default-width;
+  height: $default-height;
+  body {
+    overflow: hidden;
+    width: $default-width;
+    height: auto;
+  }
+}
+/* links */
+
+.lexicon {
+  border-bottom: 1px dotted $block-border;
+  color: $primarycolor;
+  display: inline-block;
+  line-height: 0.875em;
+  text-decoration: none;
+  cursor: help;
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+/* spacer */
+.spacer_xl {
+  padding-bottom: 4.875em;
+}
+
+.spacer_l {
+  padding-bottom: 3.125em;
+}
+
+.spacer_m {
+  padding-bottom: 2.500em;
+}
+
+.spacer_s {
+  padding-bottom: 1.563em;
+}
+
+.spacer_xs {
+  padding-bottom: 0.938em;
+}
+
+.spacer_s_all {
+  padding: 1.563em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/*override ul,ol*/
+
+.order-list {
+  list-style-type: decimal;
+  padding-left: 1.333em;
+  font-size: 0.938em;
+  line-height: 1.467em;
+  overflow: hidden;
+}
+.unorder-list {
+  list-style: disc;
+  padding-left: 1.333em;
+  font-size: 0.938em;
+  line-height: 1.467em;
+  overflow: hidden;
+}
+a[href^=tel].tel_link {
+    pointer-events: none;    /* prevents click event */
+    cursor: text;
+}
+/*end*/
+
+/* button block */
+
+.block_btn {
+  margin-top: 2.500em;
+  display: inline-block;
+  a {
+    border-radius: 0;
+    display: block;  
+    line-height: 3em;
+    margin: 0 0 0.938em !important;
+    min-width: 12.875em;
+    padding: 0 0.938em;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    font-size: 16px;
+    @include regular;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.icon_cta {
+  font-size: 1.313em;
+  vertical-align: text-top;
+  padding-right: 0.714em;
+}
+
+.block_btn {
+  .btn_primary.tel_link:hover {
+    background: $primarycolor;
+  }
+  .btn_secondary.tel_link:hover {
+    background: $primarytxtcolor;
+  }
+}
+
+.col .lnk_primary {
+  display: initial;
+  vertical-align: inherit;
+}
+
+/* Overlay modals */
+
+button.close {
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  font-size: 0.750em;
+  width: 3em;
+  height: 3em;
+  font-weight: bold;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+  color: unquote($white-clr-primary);
+  background: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.wcm-lexicon button.close {
+  top: 0;
+  right: 0;
+}
+
+button.close {
+  &:hover, &:focus, &:active {
+    color: unquote($white-clr);
+    text-decoration: none;
+    cursor: pointer;
+    background: $icon-close-bg;
+  }
+}
+
+.wcm-lexicon .modal-dialog, .modal_faq .modal-dialog {
+  /*Need clarification*/
+  width: 46.5em;
+  margin: 1.875em auto;
+  position: relative;
+}
+
+.modal-content {
+  /*Need clarification - box shadow*/
+  position: relative;
+  background-color: unquote($white-bg);
+  border: 1px solid $wrapper-content-border;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+.modal-header {
+  /*Need clarification*/
+  border-bottom: 1px solid $corousal-border;
+  min-height: 1.026786em;
+  background: $modal-header-bg;
+  word-wrap: break-word;
+}
+.wcm-lexicon .modal-title, .modal_faq .modal-title {
+  /*Need clarification*/
+  margin: 0;
+  font-size: 1.875em;
+  @include light;
+  color: unquote($white-clr);
+}
+
+.wcm-lexicon .modal-body, .modal_faq .modal-body {
+  /*Need clarification*/
+  position: relative;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+.modal_lexicon {
+  padding: 1.563em;
+}
+
+.modal-open {
+  padding-right: 0.938em;
+}
+
+@media (max-width: 1023px) {
+  .container_fluid {
+    padding: 0 0.688em;
+  }
+
+  .container_fluid .section {
+    margin: 0 0 0.688em;
+  }
+
+  .order-list, .unorder-list {
+    font-size: 0.813em;
+  }
+  /* model */
+  .modal-open {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .container_fluid {
+    padding: 0;
+  }
+
+  .container_fluid .section {
+    margin: 0 0 0.500em;
+  }
+
+  .order-list, .unorder-list {
+    line-height: 1.538em;
+  }
+  a[href^=tel].tel_link {
+        pointer-events: auto;    /* enables click event */
+        cursor: auto;
+    }
+	.block_btn {
+    .btn_primary.tel_link:hover {
+      background: $hover-bg;
+    }
+    .btn_secondary.tel_link:hover {
+      background: $secondary-btn-clr;
+    }
+  }
+  /* model */
+  .modal-dialog button.close {
+    -webkit-backface-visibility: hidden;
+  }
+  .wcm-lexicon .modal-dialog, .modal_faq .modal-dialog {
+    width: auto;
+    margin: 1.875em 0.625em;
+  }
+
+  .wcm-lexicon .modal-title, .modal_faq .modal-title {
+    font-size: 1.500em;
+  }
+
+  .modal-body {
+    font-size: 0.750em;
+  }
+}
+
+@media (max-width: 480px) {}

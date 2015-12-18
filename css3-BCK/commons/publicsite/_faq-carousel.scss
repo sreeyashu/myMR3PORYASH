@@ -1,0 +1,152 @@
+/*FAQ Corousel - in this section some of the units should be in px for slider calculation*/
+
+.faq_block_inner {
+  overflow: hidden;
+  position: realtive;
+  div {
+    width: 49%;
+    float: left;
+    margin: 0 1% 0.750em 0;
+    position: relative;
+    &:nth-child(2n) {
+      margin: 0 0 0.750em 1%;
+    }
+  }
+}
+
+.col .faq_block_inner div {
+  a {
+    display: inline-block;    
+    width: 95%;
+    line-height: 20px;
+    padding: 0 0 10px 30px;
+  }
+  &:before {
+    font-family: 'bnpiconfont';
+    margin-right: 10px;
+    font-size: 20px;
+    position: absolute;
+    color: $primarycolor;
+    top: 0;
+    display: inline-block;
+    text-decoration: none !important;
+  }
+}
+/* faq carousel */
+
+.bx-wrapper {
+  -webkit-backface-visibility: hidden;
+  .bx-viewport {
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.modal-open {
+  -webkit-backface-visibility: hidden;
+}
+
+.bx-wrapper .bx-viewport {
+  border: 0 none;
+  left: 0;
+  background: none;
+  box-shadow: 0 0 0;
+}
+
+.modal-dialog .spacer_s_all {
+  padding: 25px 50px;
+}
+
+.bx-wrapper {
+  .bx-controls-direction a {
+    background: rgba(0, 0, 0, 0.07);
+    font-size: 0;
+    height: 70px;
+    margin-top: -17px;
+    text-decoration: none;
+    text-indent: 0;
+    width: 45px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    &:visited, &:hover, &:active, &:focus {
+      background: rgba(0, 0, 0, 0.07);
+      font-size: 0;
+      height: 70px;
+      margin-top: -17px;
+      text-decoration: none;
+      text-indent: 0;
+      width: 45px;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+    &.active {
+      background: $bx-slider-bg;
+    }
+    &:before {
+      -moz-osx-font-smoothing: grayscale;
+      color:$primarytxtcolor;
+      display: block;
+      font-family: 'bnpiconfont';
+      font-size: 26px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      left: 16px;
+      line-height: 1;
+      position: absolute;
+      text-transform: none;
+      top: 22px;
+    }
+    &.active:before {
+      color: unquote($white-clr);
+    }
+  }
+  .bx-next {
+    right: 0;
+    &:before {
+      content: "\e642";
+    }
+  }
+  .bx-prev {
+    left: 0;
+    &:before {
+      content: "\e641";
+    }
+  }
+  .bx-pager.bx-default-pager a {
+    background: $bx-bg;
+    &:hover {
+      background: $bx-bg;
+    }
+    &.active {
+      background: $bx-slider-bg;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  /* faq */
+.faq_block {
+  .fontcon-faq-active, .lnk_primary {
+    font-size: 13px;
+  }
+}
+
+.faq_block_inner div {
+  margin: 0 0 0.750em 0;
+  width: $default-width;
+  &:nth-child(2n) {
+    margin: 0 0 0.750em 0;
+    width: $default-width;
+  }
+}
+
+/* faq popup */
+
+.modal-dialog .spacer_s_all {
+  padding: 15px 45px;
+}
+}

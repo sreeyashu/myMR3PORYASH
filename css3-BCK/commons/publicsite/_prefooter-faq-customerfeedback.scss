@@ -1,0 +1,258 @@
+/*Pre-footer Customer feedback style starts */
+
+.customer_feedback {
+  border-bottom: 3px solid $feedback-border;
+  color: $info-block-clr;
+  h2, p {
+    color: $info-block-clr;
+  }
+  .col.span_12 {
+    margin: 0;
+    padding: 3.750em 0 1.563em;
+  }
+  .block_container {
+    padding: 0;
+  }
+  .block_btn {
+    margin-top: 0;
+    display: block;
+    padding-top: 0.625em;
+    a {
+      min-width: 5.313em;
+      text-align: center;
+      background: $block-btn-bg;
+      height: 2.063em;
+      line-height: 2.3em;
+      width: 7.188em;
+      float: left;
+      margin: 0 0 0 1.250em !important;
+      &:hover {
+        background: $block-btn-bg;
+      }
+      &:first-child {
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .feedback_form_view .block_btn {
+    float: right;
+  }
+  .feedback textarea {
+    width: $default-width;
+    border: 0;
+    resize: vertical;
+    @include light;
+    display: inherit;
+    padding: 0.667em;
+    font-size: 0.938em;
+    line-height: 1.333em;
+  }
+  textarea:focus {
+    border: 0 !important;
+  }
+}
+
+/*Pre-footer Customer feedback style ends */
+/*FAQ Customer feedback form style starts */
+
+.modal_faq {
+  .feedBack_Slider {
+    width: $default-width;
+    display: block;
+    position: relative;
+    left: 0;
+    border-top: 1px solid $modal-faq-border;
+  }
+  .feedBack_Slider_wrapper {
+    overflow: hidden;
+    margin: -2px 0 0;
+	border: 1px solid $wrapper-content-border;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .customer_feedback {
+    display: block;
+    width: $default-width;
+    border: 0;
+    background: $feedback-bg;
+    position: relative;
+    float: left;
+    padding: 0 3.125em;
+    min-height: 1.250em;
+    .col.span_12, .block_container, .block_btn {
+      padding: 0;
+    }
+    h2, p {
+      color: unquote($inverse-clr);
+    }
+    .block_btn a {
+      background: $primarycolor;
+    }
+    .default_view {
+      .span_7 {
+        width: 57.5%;
+      }
+      .span_5 {
+        width: 40.5%;
+      }
+      .block_container {
+        float: right;
+      }
+      .block_inner {
+        height: 6.250em !important;
+        display: table !important;
+      }
+    }
+    .feedback_thanks_view .block_inner {
+      height: 6.250em !important;
+      display: table !important;
+    }
+    .default_view .block_inner, .feedback_thanks_view .block_inner {
+      width: $default-width;
+    }
+    .default_view .block_inner p, .feedback_thanks_view .block_inner p, .default_view .block_btn {
+      vertical-align: middle;
+      display: table-cell;
+    }
+    .col.span_12.feedback_form_view {
+      padding: 1.875em 0;
+    }
+    .feedback textarea {
+      border: 1px solid $feedback-text-border !important;
+      font-size: 0.938em;
+      padding: 0.667em;
+      line-height: 1.067em;
+      &:focus {
+        border: 1px solid $feedback-text-border !important;
+        font-size: 0.938em;
+	padding: 0.667em;
+	line-height: 1.067em;
+      }
+    }
+    .feedback_form_view {
+      .block_btn {
+        padding-top: 0.938em;
+      }
+      .block_inner p {
+        padding-bottom: 0.625em;
+      }
+    }
+  }
+}
+
+/*FAQ Customer feedback form style Ends */
+@media (max-width: 1023px) {
+  /*Pre-footer Customer feedback style starts */
+  .customer_feedback {
+    .default_view {
+      .span_5 {
+        width: 63%;
+      }
+      .span_7 {
+        width: 35%;
+      }
+    }
+    .block_btn a {
+      width: 6.250em;
+    }
+  }
+  .feedback_form_view .col.span_6 {
+    width: $default-width;
+  }
+  /*Pre-footer Customer feedback style ends */
+  /*FAQ Customer feedback form style starts */
+  .modal_faq .customer_feedback .block_container p {
+    font-size: 0.938em;
+  }
+  /*FAQ Customer feedback form style ends */
+}
+
+@media (max-width: 767px) {
+  /*Pre-footer Customer feedback style starts */
+  .customer_feedback {
+    .default_view {
+      .span_5 {
+        width: 43%;
+      }
+      .span_7 {
+        width: 55%;
+      }
+    }
+    .block_btn a {
+      margin: 0 0 0 0.625em !important;
+    }
+    .col.span_12 {
+      padding-top: 1.750em;
+    }
+    .feedback textarea {
+      font-size: 0.813em !important;
+    }
+  }
+  /*Pre-footer Customer feedback style ends */
+  /*FAQ Customer feedback form style starts */
+  .modal_faq .customer_feedback {
+    padding: 0 45px;
+    .block_btn a {
+      font-size: 0.813em;
+    }
+    .default_view {
+      .span_7 {
+        width: 52%;
+      }
+      .span_5 {
+        width: 46%;
+      }
+    }
+    .block_container p, .feedback textarea {
+      font-size: 0.813em !important;
+    }
+  }
+  /*FAQ Customer feedback form style ends */
+}
+
+@media (max-width: 580px) {
+  .modal_faq .customer_feedback .default_view {
+    .span_7 {
+      width: 39%;
+    }
+    .span_5 {
+      width: 59%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  /*Pre-footer Customer feedback style starts */ 
+  .customer_feedback .block_btn {
+    a {
+      width: $default-width;
+      margin: 0 0 0.750em !important;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    padding: 0;
+  }
+  .default_view .block_container {
+    padding-bottom: 1.250em;
+  }
+  /*Pre-footer Customer feedback style endss */
+  /*FAQ Customer feedback form style starts */
+  .customer_feedback .span_12 .span_6 .block_container {
+    padding-bottom: 0.938em;
+  }
+  .modal_faq .customer_feedback {
+    .block_container {
+      text-align: center !important;
+    }
+    .default_view .block_container {
+      float: none;
+    }
+    .col.span_12 {
+      padding: 1.750em 0;
+    }
+    .default_view .block_inner, .feedback_thanks_view .block_inner {
+      height: 2.438em !important;
+    }
+  }
+  /*FAQ Customer feedback form style ends */
+}

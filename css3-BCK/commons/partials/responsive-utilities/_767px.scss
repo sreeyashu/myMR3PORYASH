@@ -1,0 +1,58 @@
+
+// 767
+@media all and (max-width:$screen-sm-max) {
+  	// Alignments
+  	// -----------
+    .login_bg .content_page, 
+    .login_bg .contact_us, 
+    .login_bg .faq-page, #security_msg, 
+    .intermediate_messages {
+        width: 100%;
+        margin: 1.25em auto 0;
+		padding:0.62em 0.62em 0 0.62em; 
+    }
+    .intermediate_btns, 
+    .wcm-btns-zone {
+        width: 100%;
+    }
+
+	// Layout
+	// ------
+    #login_overlayer {
+        min-height: 12em;
+    }
+    .service_navigation {
+        display: none;
+    }
+    .content_wrapper {
+        padding: 0.62em 0;
+        min-height: inherit;
+    }
+    .home .content_wrapper {
+        padding-top: 0;
+    }
+    	
+	// Products SlideIn
+    .home .content_block {
+        float: left;
+        position: absolute;
+        z-index: 1;
+        min-height: 0;
+    }
+    .content_block #accountList, .content_block #cardList {
+        margin: 0;
+    }
+	
+	// Statements */
+	.statements_tab {
+	    display: none;
+	}
+
+	// Button Component alignments
+    .content_btns {
+        margin: 0;
+    }
+    .action_btns, .btns_zone {
+        padding:0.62em;
+    }
+}

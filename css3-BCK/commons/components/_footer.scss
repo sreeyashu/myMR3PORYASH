@@ -1,0 +1,218 @@
+/* Footer */
+
+.footer {
+	 width: $default-width;
+	 background: #2f353b;
+	 a[href^=tel] {
+	 	pointer-events:auto;
+	}
+}
+.wcm-footer {
+ 	color: unquote($white-clr);
+	padding-top: 3.438em;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    padding-bottom: 2.188em;
+	max-width:1279px;
+    margin: 0 auto;
+}
+.btn_subscription {
+    min-width: 10.188em;
+    background-color: #475059;
+    font-size:14px;
+    &:hover{
+        background-color: #51a1d4;
+    }
+}
+.link_title {
+	font-size: 1.875em;
+    color: #e5e9ef;
+    padding-bottom: 0.625em;
+    font-family: 'cond_regular';
+}
+.link_list {
+	width: 25%;
+	float: left;
+	padding-bottom: 2.86em;
+	 li {
+		 margin-bottom: 0.625em;
+         font-size:0.875em;
+		 &:before {
+  			content: "";
+  			display: inline-block;
+  			width: 5px;
+  			height: 5px;
+  			border-right: 0.1em solid #62afe0;
+  			border-top: 0.1em solid #62afe0;
+  			margin-right: 0.3em;
+  			-webkit-transform: rotate(45deg);
+  			-moz-transform: rotate(45deg);
+  			-ms-transform: rotate(45deg);
+  			-o-transform: rotate(45deg);
+   			transform: rotate(45deg);
+		}
+		 &:last-child {
+			margin-bottom: 0;
+		}
+      }
+	.social_icon {
+	    font-size: 2.19em;
+        display: table;
+        width: 100%;
+	    li {
+	       float: left;
+           margin-right: 0.563em;
+	       &:before {
+              display:none;
+           }
+	    }
+	    a{
+           background-color: #e5e9ef;
+           color: #475059;
+           -webkit-transition-duration: 0.4s;
+           transition-duration: 0.4s;
+           -webkit-transition-property: color, background-color;
+           transition-property: color, background-color;
+           box-shadow: inset 0px 0px 0px 5px #475059,0 0 transparent;
+           -webkit-box-shadow: inset 0px 0px 0px 5px #475059,0 0 transparent;
+           -moz-box-shadow: inset 0px 0px 0px 5px #475059,0 0 transparent;
+           -o-box-shadow: inset 0px 0px 0px 5px #475059,0 0 transparent;
+           &:hover{
+              text-decoration: none;
+           }
+        }
+	}
+	a {
+		color: #e5e9ef;
+		&:hover{
+			color: #51a1d4;
+            text-decoration: underline;
+		}
+	}
+	a.btn_subscription{
+	   &:hover {
+         text-decoration: none;
+         color: white;
+       }
+	}
+}
+.extsocial_icons {
+	padding-bottom: 0;
+}
+
+.link_block{
+    padding-top:1.875em;
+}
+.link_block_txt{
+    padding-bottom:0.313em;
+    font-size:0.875em;
+}
+.successive_image_block{
+    padding-top: 0.625em;
+    img{
+       margin-top: 1.250em;
+       :nth-child(2n+1) {
+           margin-right: 1.250em;
+        }
+    }
+}
+.legal_section{
+    float: right;
+    display: table-cell;
+}
+.legal_image{
+    display: table-cell;
+    padding-left: 1.56em;
+    vertical-align: middle;
+}
+.legal_msg {
+ 	color: #e5e9ef;
+	float: left;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+	line-height: 60px;
+	img {
+       width: 3.125em;
+       height: 3.125em;
+	}
+}
+.legal_lnks {
+     display: table-cell;
+     vertical-align: middle;
+	 li {
+		 float: left;
+		 margin-left: 1.56em;
+	     &:first-child {
+	 	    margin: 0;
+	     }
+	 }
+	 a {
+		 color: #e5e9ef;
+		 font-size: 0.75em;
+		 letter-spacing: 1px;
+		 &:hover{
+            color: #51a1d4;
+            text-decoration: underline;
+         }
+	}
+}
+//1023
+@media all and (max-width: $screen-md-max){
+  .link_list {
+      width: 50%;
+      &:nth-child(3) {
+         clear: both;
+      }
+   }
+   .successive_image_block {
+      img{
+         &:nth-child(n) {
+            margin-right: 1.250em;
+         }
+      }
+   }
+}
+// 767px breakpoint
+
+@media all and (max-width: $screen-sm-max) {
+    .wcm-footer {
+        padding: 1.875em 0.625em;
+    }
+
+    .link_list {
+        width: $default-width;
+        padding-bottom: 3.438em;
+		li {
+			margin-bottom: 15px;
+			&:last-child {
+				margin: 0;
+			}
+    	}
+    	.extsocial_icons {
+    	    li {
+                float: left;
+                margin: 0 0.563em 0.938em 0;
+            }
+    	}
+    }
+    .extsocial_icons {
+        border: 0;
+    }
+    .legal_section{
+       float: left;
+       width:100%;
+    }
+    .legal_msg {
+        width: $default-width;
+        float: left;
+        padding: 0.62em 0 0 0;
+        line-height: 0.938em;
+    }
+    .legal_lnks{
+       padding: 0.62em 0 0 0;
+    }
+    .title_txt {
+        padding-bottom: 0;
+    }
+    
+}

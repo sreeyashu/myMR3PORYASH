@@ -1,0 +1,66 @@
+
+.module_steps {
+	float: right;
+	display: block;
+	min-width:8.63em;
+}
+.module_steps_block li {
+	float: left;
+	text-align: center;
+	margin-left: 0.62em;
+	background-color:unquote($white-clr);
+	width:50px;
+	height:50px;
+	padding:2px;
+	@include radius-steps($step-tleft,$step-tright,$step-bleft,$step-bright);
+	 &:first-child {
+	 	margin: 0;
+	}
+}
+.module_steps__digit {
+ 	color: unquote($white-clr);
+	font-size: 1.25em;
+ 	@include regular;
+	text-align: center;
+	width:46px;
+	height:46px;
+	display: inline-block;
+	padding:15px;
+ 	@include radius-steps($step-tleft,$step-tright,$step-bleft,$step-bright);
+}
+
+// Module header specific themes for steps
+
+.h_functions .module_steps__digit{
+   @include bg-color($h-function-bg,$bg-bottom);
+}
+.h_functions .module_steps__digit.active{
+  color: $h-function-bg;
+  background: unquote($white-clr);
+}
+.h_services .module_steps__digit{
+  @include bg-color($h-services-bg,$bg-bottom);
+}
+.h_services .module_steps__digit.active{
+  color: $h-services-bg;
+  background: unquote($white-clr);
+}
+
+// 767px breakpoint
+
+@media all and (max-width: $screen-sm-max) {
+	.module_steps_block {
+		float: right;
+		li{
+			width:40px;
+			height:40px;
+			margin-left:0.31em;
+		}
+	}
+	.module_steps__digit {
+		width:36px;
+		height:36px;
+		padding: 11px;
+		font-size: 0.94em;
+	}
+}

@@ -1,0 +1,111 @@
+.wcm-faq {
+	max-width: 80em;
+	margin: 0 auto;
+	position: relative;
+}
+.widget {
+	width: 18.75em;
+	min-height:3em;
+	max-height: 31.70em;
+ 	background: unquote($white-bg);
+	position: absolute;
+	right: 1.875em;
+	-moz-box-shadow: 0 10px 3px rgba(0, 0, 0,0.6);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0,0.6);
+	box-shadow: 0 1px 3px rgba(0, 0, 0,0.6);
+	border-top: 3px solid $primarycolor;
+	z-index:3;
+	@include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+	display:none;
+	&:before{
+		  position: absolute;
+		  right: 4.125em;
+		  top: -0.625em;
+		  border-bottom: 9px solid $primarycolor;
+		  border-right: 9px solid transparent;
+		  border-left: 9px solid transparent;
+		  content: "";
+	}
+	.accordion_main:last-child {
+		border-bottom: 0;
+		.list_wrapper {
+			border-bottom: 0;
+	    }
+     }
+	.faq_question {
+		font-size: 1em;
+		line-height: 1.4;
+	}
+	.accordion_l2__inner {
+		border-top: none;
+		padding: 0.8em 0;
+	}
+	.header_l2 h3 {
+		width: 92%;
+		display: block;
+	}
+	.accordion_main {
+	 	border-top: 1px solid $default-border-clr;
+		&:first-child {
+		 	border-top: 0;
+		}
+	}
+	.module_content {
+		overflow: hidden;
+		min-height: 3em;
+		max-height: 27.06em;
+	}
+	.header_l2 {
+		position: relative;
+		font-size: 1em;
+	 	&:after {
+	 		right: 1.53em;
+		}
+	}
+	.lnk_primary{
+		color: $primary-link-clr;
+		&:hover{
+			color:$primary-hover-clr;
+		}
+	}
+}
+.widget_header {
+	position: relative;
+	padding: 1.39em;
+ 	border-bottom: 1px solid $default-border-clr;
+ 	@include regular;
+	font-size: 1.12em;
+}
+.widget_header__inner {
+	padding-right: 1.6em;
+	h2{
+		color:#252429;
+	}
+}
+.icon_widget_close {
+	font-size: 0.75em;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	cursor: pointer;
+	padding: 1em;
+}
+
+
+
+.wcm-messages, .content_row {
+ 	@include transition(all, 0.3s, ease-in-out);
+}
+
+
+/* Static link & text Widget */
+
+.static_link {
+	padding: 1.87em;
+	border-top: 1px solid #d8dbde;
+}
+.static_text {
+	padding: 1.87em;
+}
+
+

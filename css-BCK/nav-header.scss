@@ -1,0 +1,124 @@
+.nav_header{ 
+	background:#ffffff;
+	width:100%; 
+	height:3.75em; 
+	position:relative;
+	.caption{
+		float: left;
+		padding: 0.5em 0;
+		margin-left: 2.8em;
+		font-size: 1.25em;
+	}
+}
+.nav_header_inner{
+	display:table;
+	width:100%;
+	max-width:80em;/*$max-width*/
+	margin:0 auto;
+	padding:0.75em 1.875em;
+}
+
+.notifications{ 
+	float:left;
+	position:relative; 
+	margin-left:3.5em; 
+	margin-top:0.375em;
+	transition:all 0.4s ease-in-out 0s;
+	-webkit-transition:all 0.4s ease-in-out 0s;
+	-moz-transition:all 0.4s ease-in-out 0s;
+	> li{
+		display:table-cell;
+		border-left:1px dotted #cccccc;
+		padding:0.125em 0.9375em;
+		display:none;
+		&.no_notification{
+			padding:1em;
+			cursor:default; 
+			display:block; 
+			white-space:nowrap;
+		}
+		&:first-child{
+			border:0; 
+			padding-left:0;
+		}
+		> a{
+			> span{
+				display: inline-block; position:relative;	
+			}
+		}
+		&.open .dropdown-menu{
+			display:table;
+		}	
+	}
+	.notification_cont{
+		&::after{
+			content: "";
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.5);
+			width: 100%;
+			z-index: -1; 
+			display:none;
+		}	
+	}
+	.msg_count{
+		height: 1.5em;
+		width: 1.5em;
+		border-radius: 8px;
+		position: absolute !important;
+		top: -4px;
+		right: 1px;
+		background: #e53012;
+		color: #ffffff;
+		font-size: 0.625em;
+		text-align: center;
+		font-family: 'regular', arial; 
+		vertical-align:middle; 
+		line-height:1.125;
+		display: none;
+	}
+}
+.icon_notification{ 
+	font-size:1.375em;
+	vertical-align:middle;
+	color:#C1C1C1;
+	margin-right:0.3125em;
+}
+.alert{
+	.icon_notification:after{ 
+		font-family:'bnpiconfont'; 
+		content:'\e628'; 
+		color:#e53012; 
+		font-size:0.6em; 
+		position:absolute; 
+		top:-0.136em; 
+		right:0
+	}
+}
+.notification_txt{
+	vertical-align:middle;
+	font-size:0.875em;
+	margin-top: 0.2857em;
+}
+// 1023
+@media (max-width: 1023px){
+	.notifications{ margin-left:1.25em;}
+}
+
+// 767
+@media (max-width: 767px){
+	.nav_header_inner{ 
+		padding:0.75em 0.625em;
+	}
+	.notifications{ 
+		.notification_txt{ 
+			display:none;
+		}
+		> li.open .notification_cont:after{ 
+			display:block;
+		}
+	}
+}
+ 

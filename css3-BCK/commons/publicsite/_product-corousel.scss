@@ -1,0 +1,153 @@
+/*product corousal*/
+
+.corousal_header {
+  display: table;
+  width: $default-width;
+}
+
+.corousal_title {
+  display: table-cell;
+  font-size: 1.563em;
+  height: 2.200em;
+  vertical-align: middle;
+  width: $default-width;
+}
+
+.corousal_body {
+  font-size: 0.938em;
+  border-top: 3px solid $corousal-border;
+  padding-bottom: 4.267em;
+}
+
+.detail_block a.detail_inner.active .corousal_body {
+  border-top: 3px solid $active-corousal-border;
+}
+
+.column_4 .slide .detail_block {
+  width: auto;
+}
+
+.plus_area {
+  width: 7.500em;
+  height: 7.500em;
+  position: absolute;
+  bottom: -3.750em;
+  right: -3.750em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: $main-bg-clr;
+  box-shadow: 0 0 2px 0 #ccc inset;
+}
+
+.icon_plus_thin {
+  left: 0.500em;
+  position: absolute;
+  top: 2.688em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  font-weight: bold;
+}
+
+.fontcon-plus-thin::before {
+  color: $icon-plus-thin-clr;
+  content: "\e640";
+  font-family: 'bnpiconfont';
+  font-size: 1.875em;
+}
+
+.detail_block a.detail_inner.active .plus_area {
+  background: $active-area-bg;
+  box-shadow: 0 0 2px 0 #1d6839 inset;
+}
+
+.product_carousel {
+  .detail_block .detail_inner {
+    overflow: hidden;
+	-webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+  }
+  .listing_block .fontcon-faq-active1 {
+    background: $primarycolor;
+    height: 0.188em;
+    margin-top: 0.500em;
+    width: 0.188em;
+  }
+}
+
+.listing_block {
+  padding-top: 1.875em;
+  li {
+    margin-bottom: 0.500em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      vertical-align: top;
+      display: inline-block;
+      margin-left: 3%;
+      overflow: hidden;
+      width: 82%;
+    }
+  }
+}
+
+.detail_block a.detail_inner.active .listing_block {
+  li {
+    color: unquote($white-clr);
+  }
+  .fontcon-faq-active1 {
+    background:unquote($white-bg);
+  }
+}
+
+.product_carousel {
+  .btn_default {
+    @include regular;
+  }
+  .btn_secondary {
+    display: block;
+    height: 2.750em;
+    line-height: 3em;
+    margin-top: 0.625em;
+    overflow: hidden;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* carousel */
+  .product_carousel {
+    .bx-wrapper {
+      max-width: $default-width !important;
+      .bx-viewport {
+        height: $default-height !important;
+      }
+    }
+    .bx-viewport .detail_block {
+    	margin-left: 0;
+  	}
+    .detail_block {
+      width: 17.500em !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  /*product corousal*/
+  .multi_column.product_carousel .detail_block {
+    width: 17.500em !important;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .listing_block {
+    padding-bottom: 3.625em;
+  }
+  .corousal_body {
+    font-size: 0.813em;
+  }
+}

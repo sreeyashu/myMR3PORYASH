@@ -1,0 +1,95 @@
+
+.search_block {
+	padding: 1.25em 1.87em;
+	display: table;
+ 	width: $default-width;
+ 	background-color:#f8faf9;
+ 	border-bottom:1px solid #f1f1f1;
+}
+.search_block_inner {
+	display: table;
+ 	width: $default-width;
+}
+.search_field {
+	 width: 60%;
+	 display: table-cell;
+	 vertical-align: middle;
+	.default_input_field {
+		padding-right: 2.75em;
+	}
+}
+
+/*.search_field.clear .default_input_field >input{
+	padding-right:43px;
+}*/
+
+//To add this such that it works in IE
+
+.search_field.clear .default_input_field{
+	padding-right:5em;
+}
+
+.search_wipe {
+	border-left: 0;
+	color: $default-clr-icon;
+	font-size: 0.62em;
+	right: 4.2em;
+	position: absolute;
+	top: 0;
+	padding: 1.63em;
+	display: none;
+	/*background: unquote($white-clr);*/
+}
+.search_icon {
+	font-size: 1.37em;
+	color: $default-clr-icon;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.45em 0.45em 0.45em 0;
+	span {
+		 border-left: 1px solid $default-border-clr;
+		 padding: 0.12em 0 0.12em 0.45em;
+	}
+}
+.search_filter {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+	.show_filters {
+		 padding: 0.81em 0;
+		 cursor: pointer;
+		 display: inline-block;
+		 position: relative;
+	}
+}
+.search_module{
+	.dropdown_arrow::after {
+		left: 0;
+		border-color: transparent transparent transparent $icon2-clr;
+		border-width: 6px 6px 6px;
+		margin-top: -6px;
+	}
+	.dropdown-active:after{
+		border-color: $icon2-clr transparent transparent transparent;
+		border-width: 6px 6px 0 6px;
+		margin-top:0;
+		top:45%;
+	}
+}
+.search_counter {
+	padding-top: 1.25em;
+	display: none;
+ 	width: $default-width;
+	float: left;
+	color:$search-text;
+}
+
+// 479
+@media all and (max-width: $screen-xs-max) {
+	.show_filters p{
+  	 width:6.87em;
+  	 text-align:left;
+   }
+}

@@ -1,0 +1,110 @@
+.overlay_inner {
+	padding: 1.875em;
+	display: none;
+	margin: 0 auto;
+	.rich_text {
+		 background: unquote($white-bg);
+		 padding: 1.875em;
+	}
+}
+.overlay_header {
+	width: $default-width;
+	@include bg-color($h-overlay-bg,$bg-bottom);
+	position: relative;
+ 	color: unquote($white-clr);
+ 	padding:1.25em 1.875em;
+	@include border-radius-all($glb-tleft-radius,$glb-tright-radius,0,0);
+	h2{
+		display: table-cell;
+	  	vertical-align: middle;
+	  	font-size: 1.5em;
+	}
+}
+.overlay_icon {
+	font-size: 2.75em;
+ 	color: unquote($white-clr-icon);
+	padding-left: 0;
+	display:table-cell;
+	padding-right:0.454em;
+}
+.overlay_close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	padding: 1.25em;
+	font-size: 0.87em;
+}
+.overlay_btn {
+	display: table;
+ 	width: $default-width;
+	padding-top: 1.88em;
+}
+#timeout {
+	margin-right: 0.37em;
+}
+
+/* Overlay in sizes */
+
+.large {
+	position: relative;
+}
+.overlay_inner {
+	&.large {
+	 	max-width: 80em;
+	}
+	&.small {
+		 max-width: 48.75em;
+		 margin-top: 99px;
+	}
+}
+.small {
+	.region {
+	 	min-height: 5.62em;
+	}
+	.section .section p {
+		display: inline-block;
+		font-size: 1.5em;
+	}
+}
+
+// Overlay with List items spacings for each
+
+.overlay_content{
+	ul li{
+		margin-bottom:0.62em;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+// 767px breakpoint
+
+@media all and (max-width: $screen-sm-max) {
+	.overlay_inner {
+        padding: 0;
+		.rich_text {
+        	padding: 1.25em 0.62em 0.62em 0.62em;
+    	}
+    }
+    .overlay_header {
+        padding: 0.62em;
+        h2{
+        	 font-size: 1.125em;
+        }
+    }
+    .overlay_icon {
+        font-size: 1.87em;
+        padding-right:0.625em;
+    }
+    .logout_overlay{ 
+		.overlay_btn {
+			position: relative;
+		}
+		.navigation_btns {
+			width: $default-width;
+			float: none;
+    	}
+	}
+}

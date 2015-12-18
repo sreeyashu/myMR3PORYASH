@@ -1,0 +1,27 @@
+/* Breakpoint 1279 */
+@media all and (max-width: $screen-lg-max) {
+	.main_wrapper .wcm-service-nav {
+		display: none;
+	}
+	.linux.safari4 .login_bg, .unknown.safari1 .login_bg {
+		background-attachment: local;
+	}
+}
+
+@media all and (min-width: $screen-xl-min) {
+	.portal_wrapper, .site_header__inner, #siteHeaderErrorInner {
+		/*max-width: 80em;
+		margin: 0 auto;*/
+	}
+	.canvas_menu{
+		display:none;
+	}
+	.linux.safari4 .login_bg {
+		background-attachment: local;
+	}
+	/* severity */
+	.warning_area .severity_message {
+		width: 80em;
+	}
+  
+}

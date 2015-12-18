@@ -1,0 +1,112 @@
+.margin-widget{
+	.module_header{
+		background:#ffffff;
+		padding:1.25em;
+		border-bottom: 1px solid #d8dbde;
+		h2{
+			color: $primarytxtcolor;
+  			text-transform: none;
+  			font-size: 1.3em;
+  			text-transform: capitalize;
+		}
+	}
+	.contactus_content_inner{
+		padding:1.25em;
+		border-bottom: 1px solid #d8dbde;
+	}
+	.contactus_block {
+		padding-top:0.9375em;
+		&:first-child{
+			.contact_toggle{
+				top:-4px !important;
+			}
+		}
+		
+	}
+	.module_block, .module_contact{
+		width:100%;
+		float:none;
+		text-align: left;
+	}
+	.module_heading{
+		width: auto;
+	}
+	.contact_toggle{
+		color: $xopus-clr;
+		font-size: 0.75em;
+		position: absolute;
+		right: 0;
+		top: 6px;
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		text-align:right;
+		padding: 5px;
+	}
+	.btns_zone{
+		background:#ffffff;
+		padding:1.25em;
+	}
+			.headline_social, .headline_linklist{
+			padding: 1.25em;
+		}
+	.fullwidth_btn{
+		margin-bottom:0.62em;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	
+	
+	// Branch locator
+	// --------------
+	.margin_headline_content{
+		padding:0;
+	}
+	.form_labels, .form_details{
+		width:100%;
+		float:none;
+	}
+	&.wcm-branch{
+		form{
+			padding:1.25em;
+		}
+		.btns_zone{
+			padding:0;
+		}
+	}
+}
+
+@media all and (max-width: $screen-sm-max){
+	.margin-widget{
+		.form_labels{
+			padding-top:0.84em;
+		}
+	}
+	
+	 .module_contact .contact_date p {
+  			font-size: 0.9em;
+	  }
+}
+
+@media all and (min-width: $screen-md-min){
+	.wcm-contactus.margin-widget .contactus_content_inner{
+			font-size:0.8125em;
+		}
+	
+	.contactus_content_inner{
+			padding:1.45em;
+		}
+}
+
+@media all and (max-width: $screen-md-max){
+	.wcm-branch{
+		.headline_picture img{
+			width:100%;
+		}
+	}
+	
+	.margin-widget .locator_container img{
+  		display: none;
+	}
+}

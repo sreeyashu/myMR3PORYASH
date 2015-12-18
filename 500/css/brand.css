@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe,  h1, h2, h3, h4, h5, h6, p, blockquote, pre,  a, abbr, acronym, address, big, cite, code,  del, dfn, em, img, ins, kbd, q, s, samp,  small, strike, strong, sub, sup, tt, var,  b, u, i, center,  dl, dt, dd, ol, ul, li,  fieldset, form, label, legend,  table, caption, tbody, tfoot, thead, tr, th, td,  article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary,  time, mark, audio, video, input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	line-height: inherit;
+	
+}
+html,body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+q, blockquote {
+	quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "";
+	content: none;
+}
+a img {
+	border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	/* 1 */
+	display: table;/* 2 */
+}
+.clearfix:after {
+	clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+ *zoom: 1;
+}
+
+@font-face {
+        font-family: 'BnppSans-l';
+        src: url("../css/fonts/bnpp_sans_light-webfont.eot");
+        src: url("../css/fonts/bnpp_sans_light-webfont.eot?#iefix") format("eot"), 
+		url("../css/fonts/bnpp_sans_light-webfont.woff") format("woff"), 
+		url("../css/fonts/bnpp_sans_light-webfont.ttf") format("truetype"), 
+		url("../css/fonts/bnpp_sans_light-webfont.svg#BnppSans-l") format("svg");
+        font-style: normal;
+        font-weight: normal;
+}
+@font-face {
+        font-family: 'BnppSans-r';
+        src: url("../css/fonts/bnpp_sans-webfont.eot");
+        src: url("../css/fonts/bnpp_sans-webfont.eot?#iefix") format("eot"), url("../css/fonts/bnpp_sans-webfont.woff") format("woff"), url("../css/fonts/bnpp_sans-webfont.ttf") format("truetype"), url("../css/fonts/bnpp_sans-webfont.svg#BnppSans-r") format("svg");
+        font-style: normal;
+        font-weight: normal;
+}
+@font-face {
+        font-family: 'BnppSans-b';
+        src: url("../css/fonts/bnpp_sans_bold-webfont.eot");
+        src: url("../css/fonts/bnpp_sans_bold-webfont.eot?#iefix") format("eot"), url("../css/fonts/bnpp_sans_bold-webfont.woff") format("woff"), url("../css/fonts/bnpp_sans_bold-webfont.ttf") format("truetype"), url("../css/fonts/bnpp_sans_bold-webfont.svg#BnppSans-b") format("svg");
+        font-style: normal;
+        font-weight: normal;
+}
+@font-face {
+	font-family: 'bnpiconfont';
+	src:url('fonts/bnpiconfont.eot');
+	src:url('fonts/bnpiconfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/bnpiconfont.woff') format('woff'),
+		url('fonts/bnpiconfont.ttf') format('truetype'),
+		url('fonts/bnpiconfont.svg#bnpiconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="fontcon-"], [class*=" fontcon-"] {
+	font-family: 'bnpiconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.fontcon-facebook:before {
+	content: "\e619";
+}
+.fontcon-twitter:before {
+	content: "\e603";
+}
+.fontcon-youtube:before {
+	content: "\e600";
+}
+
+/* Resets */
+caption, th, td {text-align: left;font-weight: normal;vertical-align: middle;}
+button {border: 0;}
+.f_left {float: left;}
+.f_right {float: right;}
+::-moz-selection {background: #b3d4fc;text-shadow: none;}
+::selection {background: #b3d4fc;text-shadow: none;}
+@-ms-viewport {width: device-width;}
+* {-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
+input:focus, textarea:focus{outline: none !important;height: auto;}
+*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+a{ text-decoration:none; color:#252429;}
+a[href^=tel] { pointer-events: none; cursor: default; text-decoration:none;color:#252429; }
+
+/* Body styles */
+html, body {width: 100%;height: 100%; background: #eef1f5;}
+.portal_wrapper {
+        width: 100%;
+        height: 100%;
+        font-size: 1em;
+        line-height: 1.12em;
+        color: #252429;
+        background: #eef1f5;
+        font-family: 'BnppSans-l', arial;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -khtml-user-select: none;
+        user-select: none;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;	
+		
+}
+/** Navigation header **/
+.site_header{ width:100%; height:80px; position:fixed; top:0; left:0;z-index:9999;}
+.site_header__inner{ padding: 0.8125em 1.875em 0.625em 1.875em;background:#ffffff;}
+
+/* Brand Logo*/
+.site_logotype{ float:left;}
+.brand_logo{ background:url(images/sprite.svg) no-repeat;background-position:-1px 1px; width:11.7em; height:2.5em; display:block;}
+.no-svg .brand_logo{background:url(images/sprite.png) no-repeat;background-position:-1px 1px;}
+
+/** T2 Template non-authenticated part **/
+.login_bg{ padding-top:5em; min-height:55.125em; position:relative;}
+
+/* Footer */
+.footer{width:100%; background:#252429;}
+.wcm-footer{ color:#ffffff; padding:30px 35px;}
+.link_list{ width:25%; float:left; padding-bottom:40px; font-size:14px;}
+.link_title{ font-size:16px; text-transform:uppercase; color:#959597; padding-bottom:20px;}
+.link_list li{margin-bottom:15px;}
+.link_list li:last-child{ margin-bottom:0;}
+.link_list a{ color:#ffffff;}
+.extsocial_icons{ padding-bottom:0;}
+.social_icon{ font-size:35px;}
+.social_icon li{ float:left; margin-right:20px;}
+.legal_msg{color:#d2d8e1; float:left; font-size:12px; letter-spacing:1px;}
+.legal_lnks{ float:right;}
+.legal_lnks li{ float:left; margin-left:25px;}
+.legal_lnks li:first-child{ margin:0;}
+.legal_lnks li a{ color:#ffffff;font-size:12px;letter-spacing:1px;}
+/* Static pages */
+.content_page{ background:#ffffff; padding:30px;display: table; width:100%;width:730px; margin:100px auto 0;}
+.content_page_detail{ display:table;}
+.rich_text .section{ border-top:1px solid #d8dbde; padding:18px 0 8px;}
+.rich_text .section:last-child{  padding-bottom:0;}
+.rich_text .section:first-child{ border:none; padding-top:0;}
+.rich_text .region h4{ font-size:18px;line-height:1;padding-bottom:20px;}
+.rich_text .region p{ line-height:1.4; padding-bottom:10px;}
+.rich_text .region a{ color:#009966;}
+.rich_text .region a:hover{ text-decoration:underline;}
+.highlight_text{font-family: 'BnppSans-r', arial;}
+
+
+@media all and (max-width: 319px) {html,body, .easybanking{ width:319px;}}
+@media all and (max-width: 767px) {
+.touch .login_bg{background-attachment: local;}
+.login_bg {padding: 60px 10px 0 10px;}
+.content_page{ width:100%; margin:20px auto 0;}
+.content_page {padding: 10px;}
+.wcm-footer{ padding:30px 10px 10px 10px;}
+.link_list{ width:100%;}
+.link_list li{ float:left; margin: 0 30px 0 0;}
+.link_list li:last-child{ margin: 0;}
+.extsocial_icons{ padding:15px 0; border-top:1px dotted #444; border-bottom:1px dotted #444;}
+.legal_msg, .legal_lnks{ width:100%; float:left; padding:10px 0 0 0;}
+.title_txt{ border-bottom:1px dotted #444; padding-bottom:10px;}
+.link_title{ padding-bottom:12px;}
+}
+@media (max-width: 1023px){.site_header__inner {padding: 10px;}.brand_logo {width: 42px;height: 40px;}}
+@media print {
+.site_header, .user_message, .wcm-footer, .no_print, .action_btns, .action_icons, .dropdown_arrow::after, .content_menu, .alert_messages, .margin_col{display:none;}
+}
+

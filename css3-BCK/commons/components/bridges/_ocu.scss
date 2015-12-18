@@ -1,0 +1,99 @@
+/*OCU*/
+
+.select_field {
+	width: $default-width;
+	background: $component-bg;
+	margin-bottom: 10px;
+}
+.select_content {
+	padding-left: 30px;
+	h3 {
+		padding: 3px 0 10px;
+		font-size: 1.1em;
+	}
+	p {
+		@include light;
+	}
+}
+.select_highlight {
+	background: $primarycolor;
+	color: unquote($white-clr);
+}
+.select_label {
+	padding: 30px;
+	display: table;
+	cursor: pointer;
+}
+.status {
+	color: $select-color;
+}
+.newval_discrepency {
+	color: $information-clr;
+}
+.bg_disabled {
+  -moz-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  opacity: 0.6;
+}
+.instruction_container {
+	display: table;
+	padding: 20px 0;
+	width: $default-width;
+}
+.reader_img {
+	background: url("images/id-img.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	float: left;
+	height: 340px;
+	width: 500px;
+	display: block;
+}
+.instruction_content {
+	margin-top: 103px;
+}
+.ocu_confirm_details .action_icons__global{padding:0;}
+.result_text {
+	padding: 30px 0;
+}
+.form_confirm {
+	padding-bottom: 20px;
+}
+.confirm_yes {
+	display: inline-block;
+}
+.confirm_no {
+	display: inline;
+	margin-left: 20px;
+}
+.confirm_radio_btn{ vertical-align: bottom;}
+.person_image {
+	background: url("images/ocu_icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height:67px;
+	width: 100px;
+	margin: 0 auto;
+	
+}
+.note {
+	padding: 20px 0;
+}
+.ocu_details .detail_group_title{text-transform:uppercase;}
+.txt_transform {
+	text-transform: none !important;
+}
+@media all and (max-width: 31.1875em) {
+	.reader_img {
+		background-size: 100%;
+		height: 194px;
+		width: 300px;
+	}
+}
+@media all and (max-width: $screen-sm-max) {
+	.instruction_content {
+		width: $default-width;
+		margin: 0;
+	}
+	.reader_img {
+		float: none;
+		margin-bottom: 15px;
+	}
+}
+

@@ -1,0 +1,404 @@
+/* Home Header Starts */
+
+.home_header {
+  &:before {
+    border-bottom: none;
+  }
+  .product_container {
+    position: relative;
+    z-index: 1;
+  }
+  .product_inner {
+    max-width: 72%;
+  }
+}
+
+.home_header_content {
+  position: relative;
+  .content_tile {
+    border-top: 2px solid unquote($white-clr);
+    border-right: 2px solid unquote($white-clr);
+    min-height: 14.688em;
+    max-height: 14.688em;
+    min-width: 1.250em;
+    position: relative;
+    padding-top: 0.625em;
+    margin-bottom: -2.500em;
+  }
+  .triangle_wrapper {
+    width: 2.688em;
+    height: 2.688em;
+    position: absolute;
+    top: -1.375em;
+    left: -3.188em;
+    background: transparent;
+    color: $wrapper-clr;
+    border-right: 3px solid unquote($white-clr);
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .home_header_text {
+    margin-left: -1.240em;
+    margin-top: 0.720em;
+    padding: 0 2.000em 2.000em;
+    min-height: 8.840em;
+    max-height: 8.840em;
+    min-width: 0.800em;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid unquote($white-clr);
+    border-left: 2px solid unquote($white-clr);
+    position: relative;
+    color: unquote($white-clr);
+    font-size: 1.563em;
+    text-align: right;
+  }
+  .rect_top {
+    width: 100%;
+    left: 0px;
+    top: -1.120em;
+    border-bottom: 1.120em solid rgba(0, 0, 0, 0.5);
+    border-left: 1.160em solid transparent;
+    position: absolute;
+  }
+}
+
+.home_header_text {
+  .block_text {
+    max-height: 8.000em;
+    overflow: hidden;
+    .sl_wr {
+      overflow: hidden;
+    }
+    .sl_anim {
+      position: relative;
+    }
+  }
+  h2 {
+    margin-top: 0.250em;
+    margin-bottom: 0.375em;
+    background: none;
+    line-height: 1;
+    font-size: 1.600em;
+    display: block;
+    padding: 0;
+    @include regular;
+  }
+  a {
+    color: unquote($white-clr);
+    font-size: 0.800em;
+    line-height: 1.200em;
+    padding: 0.250em 0 0;
+    margin-left: 1em;
+    float: right;
+    text-decoration: none;
+    border-bottom: solid 2px unquote($white-clr);
+    @include regular;
+    &:visited, &:hover, &:active {
+      color: unquote($white-clr);
+      font-size: 0.800em;
+      line-height: 1.200em;
+      padding: 0.250em 0 0;
+      margin-left: 1em;
+      float: right;
+      text-decoration: none;
+      border-bottom: solid 2px unquote($white-clr);
+      @include regular;
+    }
+    &.active {
+      color: $active-clr;
+      border-bottom: 2px solid $active-border;
+    }
+  }
+}
+
+.home_header_content .home_logo {
+  background: url("images/pws_logo.jpg");
+  width: 4.563em;
+  height: 4.563em;
+  position: relative;
+  background-size: 100%;
+  float: right;
+  right: -2.250em;
+}
+
+.home_header {
+  .product_btn {
+    vertical-align: bottom;
+    width: 17.813em;
+    height: 17.813em;
+    padding-left: 3.750em;
+  }
+  .slider_wrapper {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $default-width;
+    height: 25.000em;
+    overflow: hidden;
+  }
+  .bx-wrapper, .bx-viewport {
+    height: $default-height !important;
+  }
+  ul.slides {
+    position: absolute;
+    width: $default-width;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    height:  $default-height;
+    > li {
+      float: left;
+      overflow: hidden;
+      height:  $default-height;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.home_header_nav {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  .col {
+    padding-top: 2.250em;
+  }
+  .block_top_arrow {
+    background: $top-arrow-bg;
+    height: 0.938em;
+    position: fixed;
+    width: $default-width;
+    position: absolute;
+    top: 0.125em;
+    color: unquote($white-clr);
+    z-index: -1;
+    span {
+      padding-top: 0.357em;
+      position: absolute;
+      left: 48%;
+      top: -0.214em;
+      font-size: 0.875em;
+    }
+  }
+  .home_header_block_text {
+    display: none;
+  }
+  .detail_inner {
+    background: $inverse-light-bg;
+    color: unquote($white-clr);
+    border-top: 6px solid $detail-inner-border;
+  }
+  .home_block_special .detail_inner {
+    background: $block-special-bg;
+  }
+  .detail_block {
+    a.detail_inner.active {
+      background: $primarytxtcolor;
+    }
+    .block_container {
+      padding: 1.875em 1.250em 0;
+    }
+  }
+  a.detail_inner h2 {
+    color: unquote($white-clr);
+    font-size: 1.875em;
+    padding-bottom: 1em;
+  }
+  .block_image {
+    background-size: cover;
+    width: $default-width;
+    height:  $default-height;
+  }
+  .block_special {
+    position: absolute;
+    top: 0;
+    left: 1.250em;
+    color: unquote($white-clr)!important;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .active .block_special {
+    background: $block-special-bg !important;
+  }
+}
+
+.home_header {
+  .bx-pager {
+    position: absolute;
+    left: 0;
+    bottom: 0.938em;
+    width: $default-width;
+  }
+  .bx-wrapper .bx-controls-direction a {
+    background: none;
+    color: unquote($white-clr);
+    &:visited, &:hover, &:active, &:focus, &:before {
+      background: none;
+      color: unquote($white-clr);
+    }
+    &.bx-prev:before {
+      content: "\e62e";
+      font-size: 40px;
+    }
+    &.bx-next:before {
+      content: "\e62d";
+      font-size: 40px;
+    }
+    &.active:before {
+      color: $primarytxtcolor;
+    }
+  }
+  .bx-pager.bx-default-pager a {
+    width: 0.750em;
+    height: 0.750em;
+    border-radius: 0.750em;
+    &:visited {
+      width: 0.750em;
+      height: 0.750em;
+      border-radius: 0.750em;
+    }
+    &.active, &:hover, &:focus {
+      background: $active-hover-bg;
+    }
+  }
+}
+
+/* Home Header Ends */
+@media (max-width: 1023px) {
+  /* Home Header Starts */
+  .home_header {
+    .slider_wrapper {
+      height: 23.125em;
+    }
+    height: 23.125em;
+    .product_container {
+      height: 15.625em;
+      width: 70%;
+      float: right;
+    }
+    .product_inner {
+      display: table-cell;
+      vertical-align: bottom;
+      float: none;
+    }
+  }
+  .home_header_content {
+    padding-right: 2.188em;
+    display: block;
+    .content_tile {
+      margin-bottom: 0;
+    }
+  }
+  .home_header .product_btn, .home_header_nav {
+    display: none;
+  }
+  .home_header_content .home_logo {
+    right: 0;
+    position: absolute;
+    bottom: -2.188em;
+  }
+  .home_header {
+    .bx-wrapper .bx-controls-direction a {
+      top: 40%;
+      &:visited, &:hover, &:active, &:focus {
+        top: 40%;
+      }
+    }
+    ul.slides > li {
+      background-position: 15% 100%;
+    }
+  }
+  /* Home Header Ends */
+}
+
+@media (max-width: 767px) {
+  /* Home Header Starts */
+  .home_header {
+    height: 26.563em;
+    position: relative;
+    display: block;
+    .product_container {
+      width: $default-width;
+      position: absolute;
+      bottom: 1.563em;    
+      min-height: 14.063em;
+      max-height: 15.625em;
+      overflow: hidden;
+    }
+    .product_inner {
+      width: $default-width;
+      max-width: $default-width;      
+    }
+  }
+  .card_slide .home_header_content {
+    display: block;
+    padding: 0;    
+  }
+  .home_header_content {
+    display: block;
+    padding: 0;    
+    .triangle_wrapper, .rect_top, .home_logo {
+      display: none;
+    }
+    .content_tile {
+      border: none;      
+      padding-top: 0;
+      min-height: 12.500em;
+      max-height: 15.625em;
+    }
+    .home_header_text {
+      border: none;
+      padding: 0.800em;
+      margin: 0;    
+      max-height: 10.000em;
+      margin-left: -1px;
+    }
+  }
+  .home_header_text {
+    h2 {
+      font-size: 1.040em;
+      line-height: 1.120em;
+    }
+    p {
+      font-size: 0.680em;
+    }
+    a {
+      font-size: 0.640em;
+      &:visited, &:hover, &:active {
+        font-size: 0.640em;
+      }
+    }
+  }
+  .home_header {
+    .slider_wrapper, .bx-wrapper {
+      height: 26.563em !important;
+    }
+    .bx-viewport {
+      height: 25.000em !important;
+    }
+    .bx-wrapper .bx-controls-direction a {
+      top: 25%;
+      &:visited, &:hover, &:active, &:focus {
+        top: 25%;
+      }
+    }
+    .bx-pager {
+      bottom: -0.357em;
+      font-size: 0.875em;
+      padding-top: 0;
+    }
+  }
+  /* Home Header Ends */
+}
+
+@media (max-width: 480px) {
+  /* Home Header Starts */
+  .home_header_text h2 {
+    font-size: 0.800em;
+  }
+  /* Home Header Ends */
+}

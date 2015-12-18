@@ -1,0 +1,75 @@
+/* Bootstrap Panel group */
+
+.collapse {
+  display: none;
+  visibility: hidden;
+  &.in {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -moz-transition-duration: .35s;
+  -ms-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -moz-transition-property: height, visibility;
+  -ms-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
+
+.panel {
+  margin-bottom: 1.250em;
+  background-color: unquote($white-bg);
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-body {
+  padding: 0.938em;
+}
+
+.panel-heading {
+  padding: 0.625em 0.938em;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1em;
+  color: inherit;
+  > a {
+    color: inherit;
+  }
+}
+
+.panel-footer {
+  padding: 0.625em 0.938em;
+  background-color: $panel-bg;
+  border-top: 1px solid $panel-border;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* Bootstrap Panel group */

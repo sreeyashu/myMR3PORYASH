@@ -1,0 +1,385 @@
+/*Sepa CR*/
+
+.carousel-modal {
+  .input-group {
+    background: unquote($white-bg);
+  }
+  .selectize-dropdown {
+    .main-group {
+      background: $header-list-bg;
+      border-top: 0.0625em solid $default-border-clr;
+    }
+    [data-selectable].selected {
+      position: relative;
+      padding-left: 0.9375em;
+      color: $primarytxtcolor;
+      :before {
+        position: absolute;
+        border-left: 0.4375em solid $sepacr-border-clr;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        content: ".";
+        color: transparent;
+      }
+    }
+  }
+}
+
+.calendar div {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  border: none;
+}
+
+.carousel-modal {
+  .selectize-dropdown {
+    .optgroup-header {
+      background: unquote($white-bg);
+      border-bottom: 0.0625em solid $default-border-clr;
+      border-top: 0.0625em solid $default-border-clr;
+    }
+    &.single {
+      border: 0;
+    }
+  }
+  &.selectionlist-modal .modal-body {
+    .inputWrapper {
+      margin: 0;
+      padding: 0.938em;
+      background: $header-list-bg;
+      border-bottom: 0em;
+    }
+    .dropdown_content > {
+      ul > li.selected {
+        background-color: transparent;
+        position: relative;
+        padding-left: 0.9375em;
+        color: #252429;
+      }
+      div > div.selected:before {
+        position: absolute;
+        border-left: 0.4375em solid $sepacr-border-clr;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        content: ".";
+        color: transparent;
+      }
+    }
+  }
+}
+
+.selectize-control.single .selectize-input.mobilebackground {
+  background-image: url('./images/dropdown_gradient_and_outline.png');
+  background-size: cover;
+  padding-right: 0.625em;
+}
+
+.carousel-modal .selectize-input-overlay + div input, .selectize-input > div {
+  max-width: 99% !important;
+}
+
+.selected_account.list_item__header{
+  padding: 0.56em 0;
+  font-family: 'regular', arial;
+  max-width: 100% !important;
+}
+
+.selected_account .list_header_title {
+  color: #76767b;
+  text-transform: none;
+}
+
+.selectize-control.single .selectize-input.no-after:after {
+  content: none;
+}
+
+.datepicker-modal .bg-primary {
+  @include bg-color($carousel-bg-top,$carousal-bg-bottom);
+}
+
+.containerRight, .containerLeft {
+  display: table-cell;
+  width: $width-half;
+}
+
+.carousel-modal .modal-content {
+  overflow: hidden;
+}
+
+.leftOut {
+  transition: margin;
+}
+
+.transitionIn {
+  background: unquote($white-bg);
+  animation: transitionIn 1s;
+  -webkit-animation: transitionIn 1s;
+  left: 0;
+  position: relative;
+}
+
+@keyframes transitionIn {
+  from {
+    left: 99%;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+
+@-webkit-keyframes transitionIn {
+  from {
+    left: 99%;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+
+.transitionOut {
+  background: unquote($white-bg);
+  animation: transitionOut .4s;
+  -webkit-animation: transitionOut .4s;
+  left: -100%;
+  position: relative;
+}
+
+@keyframes transitionOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+
+@-webkit-keyframes transitionOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+
+.reverseTransitionIn {
+  background: unquote($white-bg);
+  animation: reverseTransitionIn .4s;
+  -webkit-animation: reverseTransitionIn .4s;
+  left: 0;
+  position: relative;
+}
+
+@keyframes reverseTransitionIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+
+@-webkit-keyframes reverseTransitionIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+
+.reverseTransitionOut {
+  background: unquote($white-bg);
+  animation: reverseTransitionOut 1s;
+  -webkit-animation: reverseTransitionOut 1s;
+  left: 99%;
+  position: relative;
+}
+
+@keyframes reverseTransitionOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: 99%;
+  }
+}
+
+
+@-webkit-keyframes reverseTransitionOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: 99%;
+  }
+}
+
+
+.slide {
+  &.in {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-animation-name: slideinfromright;
+    -moz-animation-name: slideinfromright;
+  }
+  &.out {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-animation-name: slideouttoleft;
+    -moz-animation-name: slideouttoleft;
+  }
+}
+
+@-webkit-keyframes slideinfromright {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+
+@-webkit-keyframes slideouttoleft {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+
+@-moz-keyframes slideinfromright {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+
+
+@-moz-keyframes slideouttoleft {
+  from {
+    -moz-transform: translateX(0);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+
+.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 350ms;
+}
+
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 225ms;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 225;
+}
+
+.slide {
+  &.in.reverse {
+    -webkit-transform: translateX(0);
+    -webkit-animation-name: slideinfromleft;
+  }
+  &.out.reverse {
+    -webkit-transform: translateX(100%);
+    -webkit-animation-name: slideouttoright;
+  }
+}
+
+@-webkit-keyframes slideinfromleft {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+
+@-webkit-keyframes slideouttoright {
+  from {
+    -webkit-transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+
+.carousel-modal .searchForm input {
+  width: $default-width;
+  margin-left: 0 !important;
+  font-family: "light";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #76767b;
+  -webkit-appearance: caret;/*Added for the outline in webkit browsers*/
+}
+
+.datepicker.datepicker-inline {
+  margin: 0 auto;
+}
+
+.carousel-modal.selectionlist-modal .modal-body {
+  width: 200%;
+  display: table;
+}
+
+.new-beneficiary-link-div {
+  padding: 0 0.75em 0.5em 0;
+  background: $header-list-bg;
+}
+
+.carousel-modal .searchForm.searchBox {
+  margin-left: 0em;
+}
+
+.table_display{
+  display: table;
+}
+
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+  .datepicker-modal {
+    .modal-dialog {
+      margin: 0;
+    }
+    .modal-body {
+      padding: 0;
+    }
+  }
+}
+
+@media all and (max-width: $screen-sm-max) {
+  .selected_account.list_item__header {
+     padding: 0.05em 0;
+     font-family: inherit;
+     max-width: 100% !important;
+  } 
+
+  .selected_account .list_header_title {
+     color: #76767b;
+     text-transform: none;
+     font-family: inherit;
+  }
+}

@@ -1,0 +1,408 @@
+/* selectize style starts */
+
+.selectize_field .selectize-input input {
+    width: 98%!important;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.selectize_field .selectize-input {
+    background: url(./images/dropdown_strip.png) no-repeat right center, #ffffff;
+    padding-right: 2.5em;
+}
+
+.selectize_field .selectize-input.has-items input {
+    width: 2px!important;
+}
+
+.selectize-control {
+    position: relative;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+    font-family: inherit;
+    font-size: 1em;
+    -webkit-font-smoothing: inherit;
+    line-height: 18px;
+    color: $select-color;
+}
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+    display: inline-block;
+    cursor: text;
+}
+
+.selectize-input, .input-group {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbd8de;
+    height: 44px;
+    @include light;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding: 5px 8px 2px;
+}
+
+.selectize-input.full {
+    background-color: #ffffff;
+}
+
+.selectize-input.disabled,
+.selectize-input.disabled * {
+    cursor: default !important;
+}
+
+.selectize-input.focus, .input-group.focus {
+    border: $focus solid 1px !important;
+}
+
+.selectize-input > *, .input-group > * {
+    display: -moz-inline-stack;
+   display: inline-block;
+    *display: inline;
+    vertical-align: baseline;
+    zoom: 1;
+    line-height: 1.6;
+}
+
+ .input-group > * {
+   display: block;
+}
+
+.selectize-control.multi .selectize-input > div {
+    padding: 2px 6px;
+    margin: 0 3px 3px 0;
+    color: #ffffff;
+    cursor: pointer;
+    background: #1da7ee;
+    border: 1px solid #0073bb;
+}
+
+.selectize-control.multi .selectize-input > div.active {
+    color: #ffffff;
+    background: #92c836;
+    border: 1px solid #00578d;
+}
+
+.selectize-control.multi .selectize-input.disabled > div,
+.selectize-control.multi .selectize-input.disabled > div.active {
+    color: #ffffff;
+    background: #d2d2d2;
+    border: 1px solid #aaaaaa;
+}
+
+.selectize-input input, .input-group input {
+    max-width: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 1px !important;
+    line-height: 1.7em !important;
+    text-indent: 0 !important;
+    background: none !important;
+    border: 0 none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-user-select: auto !important;
+      -webkit-user-modify: read-write-plaintext-only; /*read-write;Yellow border issue in Android*/
+    height:27px!important;
+}
+
+.searchForm{
+	  margin-left: 25px;
+	}
+
+.input-group .searchField{
+	display:block;
+	width:100%;
+}
+.input-group input {
+    width: 100% !important;
+	/*margin-left: 28px !important;*/
+	@include light;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.selectize-input input:focus {
+    outline: none !important;
+}
+
+.selectize-input::after {
+    display: block;
+    clear: left;
+    content: ' ';
+}
+
+.selectize-input.dropdown-active::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    background: #f0f0f0;
+    content: ' ';
+}
+
+.selectize-dropdown {
+    position: absolute;
+    z-index: 10;
+    margin: -1px 0 0 0;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-top: 0 none;
+    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 20%/100%);
+    -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 20%/100%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 20%/100%);
+    @include light;
+}
+
+.selectize-dropdown [data-selectable] {
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid #d8dbde;
+}
+
+.selectize-dropdown [data-selectable]:last-child {
+    border-bottom: 0;
+}
+
+.selectize-dropdown [data-selectable] .highlight {
+   background: rgba(125, 168, 208, 20%/100%);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header {
+    padding: 5px 8px;
+}
+
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+    border-top: 0 none;
+}
+
+.selectize-dropdown .optgroup-header {
+    color: #252429;
+    cursor: default;
+    background: #e5e9ef;
+    border-bottom: 0;
+	padding: 0.5em 0.75em 0.38em 0.75em;
+}
+.modal-open .selectize-dropdown .optgroup-header {
+	/*padding:0!important;*/
+}
+.modal-open .selectize-dropdown .optgroup-header .optgroup-header {
+	padding: 0.5em 0.75em 0.38em 0.75em!important;
+}
+.selectize-dropdown .active {
+    color: #495c68;
+    background-color: #f5fafd;
+}
+
+.selectize-dropdown .active.create {
+    color: #495c68;
+}
+
+.selectize-dropdown .create {
+    color: rgba(48, 48, 48, 50%/100%);
+}
+
+.sf-desktop .selectize-dropdown-content {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+//commented for iscroll not being  initiated
+/*.mobile-list-view .selectize-dropdown-content {
+    max-height: 100%;
+}*/
+
+
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+    cursor: pointer;
+}
+
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+    cursor: text;
+}
+
+.selectize-control.single .selectize-input:after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    border-color: #252429 transparent transparent transparent;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    content: ' ';
+}
+
+.selectize-control.single .selectize-input.dropdown-active:after {
+    margin-top: -4px;
+    border-color: transparent transparent #252429 transparent;
+    border-width: 0 6px 6px 6px;
+}
+
+.selectize-control.rtl.single .selectize-input:after {
+    right: auto;
+    left: 15px;
+}
+
+.selectize-control.rtl .selectize-input > input {
+    margin: 0 4px 0 -2px !important;
+}
+
+.selectize-control .selectize-input.disabled {
+    background-color: #fafafa;
+    /*opacity: 0.5; for unclear visibility*/
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.selectize-control.multi .selectize-input.disabled [data-value] {
+    color: #999;
+    text-shadow: none;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.selectize-control.single .selectize-input,
+.selectize-dropdown.single {
+    border-color: #d8dbde;
+	/*@include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);*/
+}
+
+.selectize-dropdown{
+	@include border-radius-all(0,0,$glb-bleft-radius,$glb-bright-radius);
+}
+
+.selectize-dropdown .optgroup {
+    border-top: 1px solid #f0f0f0;
+	position: relative;
+}
+
+.selectize-dropdown .optgroup:first-child {
+    border-top: 0 none;
+}
+
+.selectize-input-overlay {
+    position: absolute;
+    background: rgba(255,255,255,10%/100%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.listViewOverlay {
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,50%/100%);
+    z-index: 2;
+}
+
+.listViewContainer {
+    height: 100%;
+    width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    margin-top: 30px;
+}
+
+.listViewOverlay .selectize-dropdown {
+    position: relative !important;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+.OverlayHeader {
+	/* User hfunction styles in here*/
+    background: #009966;
+    padding: 1.12em 0.75em;
+    position: relative;
+    color: white;
+    @include regular;
+}
+
+.glyphicon-remove.closeButton {
+    float: right;
+    cursor: pointer;
+    font-size: 0.88em;
+    position: absolute;
+    right: 0.75em;
+    top: 0.62em;
+    padding: 0.72em;
+}
+
+.glyphicon-remove:before {
+    font-family: 'bnpiconfont';
+    content: "\e615";
+}
+
+.glyphicon-search:before {
+    font-family: 'bnpiconfont';
+    content: "\e616";
+}
+
+.input-group-addon {
+    /*font-size: 1.24em;
+    color: #afafaf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.20em 0 0.20em 0.45em;*/
+      font-size: 1.24em;
+    color: #afafaf;
+	float: left;
+	line-height: 1.1;
+
+}
+
+.control-label {
+    display: none;
+}
+
+.selectize-dropdown .main-group {
+    background: #d8dbde;
+    border-bottom: 1px solid #d8dbde;
+    padding: 0.5em 0.75em 0.38em 0.75em;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #252429;
+    @include regular;
+}
+.selectionlist-modal .optgroup-option {
+	overflow: hidden;
+	padding: 5px 0;
+}
+
+@media all and (max-width:$screen-sm-max) {
+    .listViewContainer {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/* selectize style ends */

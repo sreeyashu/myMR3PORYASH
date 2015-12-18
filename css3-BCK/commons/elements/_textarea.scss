@@ -1,0 +1,37 @@
+.default_text_area {
+	 width: $default-width;
+	 textarea {
+		 border: 1px solid $default-border-clr;
+		 font-size: 1em;
+		 color: $select-color;
+		 width: $default-width;
+		 min-height:4.6875em;
+		 resize: vertical;
+		 padding: 11px 12px; /* to maintain the standard space between the input  */
+		 @include boxsizing(border-box);
+		 @include border-radius(0px);
+		 -webkit-appearance: none;
+		 @include light;
+		 @include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bright-radius,$glb-bright-radius);
+		 vertical-align: middle;
+		 &:focus {
+			border-color: $default-border-clr;
+		}
+	}
+}
+.eurostructured_remaining {
+ 	color: $select-color;
+}
+.default_text_area {
+ 	.message_length {
+ 		float: right;
+ 		margin-top: 4px;
+	}
+	.text_count {
+ 	color: $select-color;
+	margin-right: 0.25em;
+ 	span {
+ 		padding-left: 0.25em;
+	}
+  }
+}

@@ -1,0 +1,16 @@
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-md-max) {
+	.service_col {
+	  position: absolute;
+	  right: 0;
+	}
+}
+
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	.dropdown_seleted_item, .known_placeholder {
+	  max-width: 16em;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+}
+

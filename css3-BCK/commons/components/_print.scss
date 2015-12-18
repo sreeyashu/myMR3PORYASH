@@ -1,0 +1,219 @@
+/*Print Styles */ 
+
+.print_main {
+ 	background:unquote($white-bg) !important;
+ 	width:$default-width;
+	position: inherit;
+}
+
+.print {
+	margin: 0;
+ 	padding: 0;
+ 	font-size: 0.87em;
+ 	@include light;
+ 	width: $default-width;
+	.main_wrapper {
+	 	pading-top: 0;
+	}
+	.print_header {
+	 	width: $default-width;
+		display: table;
+		margin-bottom: 40px;
+	}
+	.logo {
+	  img {
+	    display: none;
+	  }
+	  &::before {
+	    width: 15.7em;
+	    height: 3.5em;
+	    content: url("images/print_logo.png") !important;
+	  }
+	}
+
+	.notavailable, .action_group, .load_more {
+		display: none;
+	}
+	.print_details_inner {
+		width: $default-width;
+		padding: 20px 0;
+		font-size: 20px;
+		//Removed it for transaction print
+		//@include regular;
+		 p {
+			line-height: 1.4;
+		}
+	}
+	.cards_title, .accounts_title, .selected_details__info {
+		color: $default-color !important;
+	}
+	.list_item__header {
+		display: table;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+	.list_content_col1 {
+		width: 70%;
+	}
+	.list_content_col2 {
+		width: 30%;
+		padding: 0;
+	}
+	.list_item__content, .list_header {
+		font-size: 0.87em;
+	}
+	.accounts_title, .cards_title, .functions_title {
+		font-size: 1.8em;
+		@include regular;
+	}
+	.module_selected_value {
+		width: auto !important;
+		font-size: 1.8em !important;
+		color: $default-color;
+		@include regular;
+	}
+	.module_row {
+	 	color: $default-color !important;
+		 label {
+			 float: right;
+			 margin: 0.56em 0.31em 0 0;
+			 font-size: 1em;
+		}
+	}
+	.flyout_selection {
+		width: 23.75em;
+	 	.arrow_icon {
+	 		display:none !important;
+	 	}
+	}
+	.selected_details__account .hello_icon {
+		padding: 0;
+		margin-top: 0.31em;
+	}
+	.hello_icon:after {
+		content: url('images/hello_icon.png');
+	}	
+	.hello_icon {
+		padding: 0;
+		margin-top: -2px;
+	}
+	.extra_contentdetails {
+		border-bottom: none;
+	}
+	.h_col {
+		width: 50%;
+	}
+	.print_topic {
+		font-size: 1.2em;
+	}
+	
+	.print_topic span{
+		margin-right: 4px;
+	}
+
+	.list_wrapper .region p, .list_wrapper .region ol{
+		line-height: 1.4em;
+	}
+	.done_icon {
+	 color: $result-icon-clr;
+	}
+	.action_icons, .arrow_icon, .action_content_icons {
+		display: none !important;
+	}
+	.faq_answer {
+		border: 0;
+	}
+	.faq_print .accordion_main {
+		border-bottom: 0;
+	}
+	.search_module{
+		display:none;
+	}
+	/*Added for transactions print*/
+
+	.details_label{
+		width: 30%;
+		line-height: 1.4em;
+	}
+	.listitem_details {
+		width: 65%;
+		padding-top: 0;
+	}
+	.selected_details__account{
+		width: auto;
+	}
+	
+	.list_header{
+		border-top: 1px solid #D8DBDE;
+	}
+
+	.print_transaction_detail{
+		padding-top: 30px;
+	}	
+	
+	.list_header h2 {
+		padding: 1.25em 0 0.25em 0;
+		border-top: 2px solid #d8dbde;
+	}
+	
+	.list_group:last-child .list_wrapper_inner{
+		border-top: 1px solid #d8dbde;
+	}
+	
+	.amount_highlight, .lnk_primary {
+		color: #252429;
+	}
+	.listitem_details label {
+		@include light;
+	}
+	
+	// SOLAR
+	.form_fields{padding-bottom:5px;}
+	.form_details{width:auto !important; padding:0!important}
+	.section{padding-top:5px;
+		.invisible{display:none}
+	}
+	.content_group_title{font-size:18px; margin-bottom:15px}
+	.table{font-size:12px !important;}
+	.table ul li{line-height:1.1;}
+	.table-details > tbody > tr > td:nth-of-type(1){width:50% !important;}
+	.table-compare> tbody > tr > td:nth-child(1){width:30% !important;}
+	.totalBridgingLoan label{display:block;}
+	.content_title{margin-bottom:1.25em;}
+	.list_details{
+		padding-top:5px;
+		&.mar-t20{margin-top:10px;}
+	}
+}
+
+/* style for font bold issue while loading */
+/*
+@media all -webkit-device-pixel-ratio {
+    .portal_wrapper{
+	font-family: 'light', arial !important;
+    }
+}
+*/
+
+@media not -webkit-device-pixel-ratio {
+    .portal_wrapper{
+	font-family: "light" !important;
+    }
+}
+
+
+
+.preloadLogo{
+	    width: 15.7em;
+	    height: 3.5em;
+	    background-image: url("images/print_logo.png");
+	    background-repeat: no-repeat;
+}
+
+.preloadHello{
+	width: 15.7em;
+	height: 3.5em;
+	background-image: url('images/hello_icon.png');
+	background-repeat: no-repeat;
+}

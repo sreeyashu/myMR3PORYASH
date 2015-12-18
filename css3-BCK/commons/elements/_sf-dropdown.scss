@@ -1,0 +1,97 @@
+//sf_dropdown
+
+//(below extend will be used for :).selectize-input > div, .selectize-input-overlay + div input
+%modal_dropdown_extend {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: top;
+	max-width: 95% !important;
+}
+
+
+.selectionlist-modal {
+	.bg-primary {
+		background: $primarycolor;
+	}
+	.modal-body {
+		padding: 0;
+		.inputWrapper {
+			margin: 0.938em;
+		}
+		.dropdown_content {
+			overflow: hidden;
+			position: relative;
+			&.no-iscroll {
+				overflow-y: scroll;
+			}
+			> ul {
+				width: $default-width;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid $default-border-clr;
+				border-top: 1px solid $default-border-clr;
+				> li {
+					width: 100%;
+					//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: translateZ(0);
+					padding: 0.8em 0.500em;
+					.highlight {
+						/*background: rgba(0, 0, 0, 10%/100%); */
+						//need to change this
+					}
+					&.selected {
+						background: #f4f5f6;
+						color: $primarytxtcolor;
+					}
+				}
+			}
+		}
+	}
+}
+.selectize-input-overlay {
+	position: absolute;
+	background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); //need more info for this
+	width: $default-width;
+	height: $default-width;
+	z-index: 2;
+	+ div input {
+		@extend %modal_dropdown_extend;
+	}
+}
+.selectize-control.single .selectize-input.hideSearch {
+	cursor: pointer;
+	input {
+		cursor: pointer;
+		width: 1px !important;
+		max-width: 1px !important;
+		min-width: 1px !important;
+		opacity: 0 !important;
+		position: absolute!important;
+		height:0px !important;
+	}
+	&.input-active {
+		cursor: pointer;
+		input {
+			cursor: pointer;
+		}
+	}
+	.placeholder {
+		
+	}
+}
+.selectize-input > div {
+	@extend %modal_dropdown_extend;
+}
+/* dropdown list */
+.sf-mobile .selectize-control.single .selectize-input:after {
+	content: "\e639";
+	border: 0;
+	font-family: 'bnpiconfont';
+	top: 16px;
+	right: 28px;
+}
+.selectionlist-modal .modal-body .optgroup.list-group-item {
+	padding: 0;
+}

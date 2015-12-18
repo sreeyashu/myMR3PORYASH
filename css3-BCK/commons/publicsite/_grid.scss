@@ -1,0 +1,232 @@
+/*PWS reset CSS*/
+
+.col {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+.block_btn .btn {
+  &:focus, &:active:focus, &.active:focus {
+    outline: 0;
+  }
+}
+/* section */
+
+.container_fluid .section {
+  clear: both;
+  padding: 0px;
+  margin: 0 0 1.55em;
+  background: unquote($white-bg);
+}
+
+.section:last-child {
+  /*margin: 0;*/
+}
+
+/* column */
+
+.col {
+  display: block;
+  float: left;
+  margin: 0 0 0 2%;
+  min-height: 0.063em;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+/*  grouping  */
+
+.group {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* 12 column grid */
+
+.span_12 {
+  width: $default-width;
+}
+
+.span_11 {
+  width: 91.5%;
+}
+
+.span_10 {
+  width: 83%;
+}
+
+.span_9 {
+  width: 74.5%;
+}
+
+.span_8 {
+  width: 66%;
+}
+
+.span_7 {
+  width: 57.5%;
+}
+
+.span_6 {
+  width: 49%;
+}
+
+.span_5 {
+  width: 40.5%;
+}
+
+.span_4 {
+  width: 32%;
+}
+
+.span_3 {
+  width: 23.5%;
+}
+
+.span_2 {
+  width: 15%;
+}
+
+.span_1 {
+  width: 6.5%;
+}
+
+/* 12 column grid pull left and right */
+
+[class$="_pull_before"], [class*="_pull_before"], [class$="_pull_both"], [class*="_pull_both"], .spacer_0 {
+  margin-left: 0;
+}
+
+.span_12_pull_before, .span_12_pull_after {
+  width: $default-width;
+}
+
+.span_11_pull_before, .span_11_pull_after {
+  width: 93.5%;
+}
+
+.span_10_pull_before, .span_10_pull_after {
+  width: 85%;
+}
+
+.span_9_pull_before, .span_9_pull_after {
+  width: 76.5%;
+}
+
+.span_8_pull_before, .span_8_pull_after {
+  width: 68%;
+}
+
+.span_7_pull_before, .span_7_pull_after {
+  width: 59.5%;
+}
+
+.span_6_pull_before, .span_6_pull_after {
+  width: 51%;
+}
+
+.span_5_pull_before, .span_5_pull_after {
+  width: 42.5%;
+}
+
+.span_4_pull_before, .span_4_pull_after {
+  width: 34%;
+}
+
+.span_3_pull_before, .span_3_pull_after {
+  width: 25.5%;
+}
+
+.span_2_pull_before, .span_2_pull_after {
+  width: 17%;
+}
+
+.span_1_pull_before, .span_1_pull_after {
+  width: 8.5%;
+}
+
+/* 12 column grid pull both */
+
+.span_12_pull_both {
+  width: $default-width;
+}
+
+.span_11_pull_both {
+  width: 95.5%;
+}
+
+.span_10_pull_both {
+  width: 87%;
+}
+
+.span_9_pull_both {
+  width: 78.5%;
+}
+
+.span_8_pull_both {
+  width: 70%;
+}
+
+.span_7_pull_both {
+  width: 61.5%;
+}
+
+.span_6_pull_both {
+  width: 53%;
+}
+
+.span_5_pull_both {
+  width: 44.5%;
+}
+
+.span_4_pull_both {
+  width: 36%;
+}
+
+.span_3_pull_both {
+  width: 27.5%;
+}
+
+.span_2_pull_both {
+  width: 19%;
+}
+
+.span_1_pull_both {
+  width: 10.5%;
+}
+
+/* 12 column grid 100% in small */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_11, .span_10, .span_9, .span_8, .span_7, .span_6, .span_5, .span_4, .span_3, .span_2, .span_1, [class$="_pull_before"], [class*="_pull_before"], [class$="_pull_both"], [class*="_pull_both"], [class$="_pull_after"], [class*="_pull_after"] {
+    width: $default-width !important;
+    padding: 0;
+    margin: 0;
+  }
+  .span_12 {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.fav_icon{
+	color:$fav-icon-default; 
+	font-size:1.25em !important; 
+	top:0.2em !important;
+	position:relative;
+	padding:6px;
+}
+.fav_select:after{
+	color:$fav-icon-selected;
+	position: absolute;
+	left:0;
+	top:0;
+	content: "\e61f";
+	padding:6px;
+}

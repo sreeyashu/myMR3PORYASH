@@ -1,0 +1,28 @@
+/* Legal Block */
+
+.column_2 .block_container h2, .column_3 .block_container h2, .legal_block .block_inner h2, .video_block .block_inner h2, .optional_block .block_inner h2, .product_carousel .detail_block a.detail_inner h2 {
+  font-size: 1.875em;
+}
+
+.legal_block {
+  .block_inner p {
+  font-size: 0.75em;
+  line-height: 1.4em;
+  }
+  .lnk_primary {
+    display: inline;
+  }
+  .leagal_inner_block {
+    background: $legal-bg;
+  	margin-top: 1em;
+  	padding: 3.25em 1em;
+  	text-align: center;
+  	font-size: 1.25em;
+  }
+}
+
+@media (max-width: 767px) {
+  .legal_block .leagal_inner_block {
+    padding: 2em 1em;
+  }
+}

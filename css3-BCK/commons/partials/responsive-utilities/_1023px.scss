@@ -1,0 +1,23 @@
+
+// 768 -1023
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.content_wrapper {
+	  padding: 1.87em;
+	}
+	.service_navigation .ls-cmp-wrap:first-child {
+	  top: 6.2em;
+	  right: 0;
+	}
+}
+/* Break point 1023 */
+@media all and (max-width: $screen-md-max) {
+	.content_col, .fluid {
+		margin-right: 0;
+	}
+	.warning_area {
+		top: 3.75em;
+	}
+	.margin_headline {
+	 	margin-right:0;
+	 }
+}

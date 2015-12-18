@@ -1,0 +1,37 @@
+.module_header{ position:relative;}
+
+
+
+.switcher{width:280px}
+.switcher_header{ position:relative; z-index:2;}
+.switcher_header p{ text-transform:uppercase;}
+.module_header .switcher_content p{ text-transform:uppercase;font-size:12px; line-height:14px; color:#252429;}
+
+.switcher.active .module_title, .switcher.active .switcher_header p{ color:#009966;}
+
+.switcher_icon{ font-size:10px; display:inline-block; vertical-align:middle;}
+
+.switcher_title{ font-size:14px; line-height:17px; text-transform:uppercase; padding-bottom:5px;}
+.switcher_subtitle{font-size:14px; line-height:17px; }
+.switcher6040{ width:100%; display:table;}
+.switcher6040 .switcher_title{ width:60%; display:table-cell; vertical-align:middle}
+.switcher6040 .switcher_subtitle{ width:40%;display:table-cell;font-family:regular; text-transform:capitalize !important; text-align:right; vertical-align:middle; padding-bottom:5px;}
+.module_header .switcher_list_item{ cursor:pointer; padding:12px 20px; border-top:1px solid #d8dbde; position:relative;}
+
+.switcher_content{ position:absolute; background:white; z-index:1; width:320px; left:10px;top:10px;border: 1px solid #d8dbde;box-shadow: 4px 4px rgba(27, 27, 27, 0.2);max-height:448px; display:none;}
+.switcher_list{height:100%; overflow-y:scroll;-webkit-transform: translateZ(0);}
+
+a.module_title{ display:block; height:48px;}
+
+@media all and (max-width:767px){
+	a.module_title{ display:block; height:37px;}
+	.switcher_content{ left:0; top:0; width:100%;max-height:none;}
+	.module_header .switcher_list_item{ padding:12px 10px;}
+	.switcher.active{ position:fixed; top:60px; left:0; height:100%; z-index:2; width:100%; height:100%;}
+	.switcher.active .switcher_header{padding-top: 14px;padding-left: 14px;}
+}
+.switcher_list_item.selected{background:#f4f5f6;}
+.switcher_list_item.selected:before{ border-left:3px solid #009966; position:absolute; left:0; content:''; height:100%; top:0;}
+
+/* Group header */
+.switcher_group_header{ background-color: #ebebeb; font-size:12px;line-height:1; font-family:regular; padding:9px 20px 7px 20px; text-transform:uppercase;  border-top:1px solid #d8dbde;}

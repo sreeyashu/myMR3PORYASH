@@ -1,0 +1,44 @@
+.title_block {
+  font-size: 1.875em;
+  padding: 1.6667em 0;
+  text-align: center;
+  position: relative;
+  &:after {
+    display: block;
+    content: " ";
+    width: $default-width;
+    position: absolute;
+    top: 50%;
+  	margin-top: -0.06667em;
+  	background: green;
+  	height: 0.0334em;
+  }
+  .title_inner {
+    background: none repeat scroll 0 0 $mainbg-bottom;
+    display: inline-block;
+  	font-size: 1em;
+  	padding: 0 1em;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .title_block {
+   		padding: 1.16667em 0;
+    .title_inner {
+     	font-size: 1.16667em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title_block {
+    padding: 0.66667em 0;
+    .title_inner {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 480px) {}

@@ -1,0 +1,158 @@
+/*App rebuild*/
+
+	/*For two column*/	
+	.T_column{
+		.fluid {
+			margin-right: 20.7em;
+		}
+		 .margin_col{
+			float: right;
+		}
+	}
+	
+	/*For one column*/
+
+/*reload*/
+@media all and (max-width: 19.937em) {
+	.S_column.portal_wrapper{
+		width: 100%;
+	}
+}
+
+
+.S_column {
+  .content_col, .fluid {
+    margin-right: 0;
+  }
+  .margin_col {
+    width: 100%;
+    margin: 0;
+    padding-top: 1.25em;
+  }
+  .wcm-banner, .margin-widget {
+    margin-bottom: 1.875em;
+    width: 100%;
+  }
+}
+
+/*ADDED FOR APP BANNERS*/
+
+/*Added for webview of width 270px value.*/
+
+// 767 - 1023
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .S_column {
+    .headline_picture img {
+      float: none;
+    }
+    /*.iw_component img {
+      width: 100%;
+    }*/
+  }
+}
+
+@media all and (max-width: $screen-md-max) {
+	.S_column {
+	  .headline_picture img {
+	    width: 300px;
+	    height: 170px;
+	    margin: 0 auto;
+	  }
+	  .wcm-banner, .margin-widget {
+	    width: 50%;
+	    float: left;
+	  }
+	  .ls-cmp-wrap {
+	    &:nth-child(even) {
+	      &.wcm-banner, .margin-widget {
+	        padding-left: 0.62em;
+	      }
+	    }
+	    &:nth-child(odd) {
+	      .wcm-banner, .margin-widget {
+	        padding-right: 0.62em;
+	      }
+	    }
+	  }
+	}
+}
+
+// 768
+@media all and (max-width: $screen-md-min) {
+	.S_column {
+	  width: auto;
+	  .ls-cmp-wrap {
+	    .wcm-banner, .margin-widget {
+	      margin-right: 0;
+	      /*width: 300px;
+	      float: left;*/
+	    }
+	  }
+	}
+  
+  .appurl .content_wrapper{
+  	padding: 0;
+  }
+}
+
+@media all and (max-width: 649px) {
+  .S_column {
+    .wcm-banner, .margin-widget {
+      width: 100%;
+      margin-bottom: 0.62em;
+      float: none;
+      padding: 0 !important;
+      /* nth child not working in android native */
+    }
+  }
+}
+
+// 480-1023
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .S_column .headline_picture img {
+    height: auto;
+  }
+}
+
+// 479 - 767
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.S_column .ls-cmp-wrap {
+	  .wcm-banner, .margin-widget {
+	    margin-right: 0;
+	  }
+	}
+}
+
+// 767
+@media all and (max-width: $screen-sm-min) {
+  .S_column .ls-cmp-wrap .iw_component {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+// 1023
+@media all and (max-width: $screen-md-max) {
+	.T_column{
+		.fluid {
+			margin-right: 0em;
+		}
+	}
+}
+ /* hiding print in app */
+ .app .fontcon-print,
+ .app .fontcon-csv{
+ 	display: none;
+ }
+.appBanner{
+     background-color: #dadde4;
+	 .portal_wrapper{
+	      background: #dadde4 !important;
+	}
+}
+.appurl{
+	background: #dadde4 !important;
+	 .portal_wrapper{
+	      background: #dadde4 !important;
+	}
+}

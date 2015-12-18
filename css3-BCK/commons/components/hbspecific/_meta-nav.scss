@@ -1,0 +1,61 @@
+.meta_navigation {
+	float: right;
+	font-size: 0.88em;
+ 	color: $select-color;
+ 	padding: 0.8em 0;
+}
+.meta_nav_user {
+ 	border-right: 1px dotted $default-border-clr;
+	padding-right: 0.94em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 16em;
+	vertical-align: middle;
+	display: none;
+	@media all and (min-width: $screen-lg-min){
+			display: table-cell;
+	}
+}
+.meta_nav_service, .meta_nav_logout {
+	display: table-cell;
+	color:$default-clr-icon;
+	font-size: 1.375em;
+}
+.meta_nav_service > li {
+	display: table-cell;
+    border-right: 1px dotted $default-border-clr;
+	padding: 0 0.85em;
+	font-size:20px;
+	position: relative;
+}
+.meta_icons_m {
+	padding: 0 0.12em 0 0.85em;
+}
+.meta_icon{
+	-webkit-transition-duration: 0.4s;
+  	transition-duration: 0.4s;
+  	-webkit-transition-property: color;
+  	transition-property: color;
+}
+.meta_icon:hover, .meta_nav_service> li.active .meta_icon {
+ 	color: $hover;
+}
+
+.msg_count{
+	height: 18px;
+	width: 18px;
+	border-radius: 8px;
+	position: absolute;
+	top: -9px;
+	right: 6px;
+	background: #e53012;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+	@include regular;
+	line-height: normal;
+	line-height: 20px;
+	display: none;
+}
+
+

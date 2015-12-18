@@ -1,0 +1,233 @@
+/* Form Standards */ 
+
+.form_container {
+ 	width: $default-width;
+}
+.form_title {
+	font-size: 1.5em;
+	padding-bottom: 0.4em;
+}
+.form_container .error_summary {
+	width: 67%;
+}
+.form_inner {
+	padding: 1.875em;
+	h5 {
+		 width: 80%;
+		 padding: 0 0 1.87em 0;
+		 @include light;
+		 font-size: 0.87em;
+	}
+}
+.form_fields {
+ 	width: $default-width;
+	display: table;
+	padding-bottom: 0.94em;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+.form_fields:last-child{
+	padding-bottom:0;
+}
+.form_labels {
+ 	@include regular;
+	font-size: 1em;
+	width: 33%;
+	padding: 0.84em 1.5625em 0.84em 0;
+	float: left;
+}
+.form_sublabel{
+	padding:0.32em 1.5625em 0.32em 0;
+}
+.sub_label{
+	font-size: 14px;
+	font-family: 'light', arial;
+	display:block;
+}
+.form_details {
+	float: left;
+	width: 67%;
+	max-width: 100%;
+}
+
+.form_info{
+	padding-bottom:1.25em;
+	line-height:1.25;
+}
+
+/* Select field selected items */ 
+
+.form_details {
+	 .selected-item {
+		 padding-top: 0.75em;
+		 display: none;
+		 color: $select-color;;
+		 line-height: 1em;
+		 overflow: hidden;
+	}
+	.selected_iban {
+		display: inline-block;
+		float: left;
+	}
+}
+.iban-label {
+	float: left;
+}
+
+
+/* Calendar icon and input */ 
+
+.trig_datepicker {
+	/*background: unquote($white-bg);*/
+	float: right;
+	padding: $datepick_pad;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 999;
+	color:$default-clr-icon;
+	@include border-radius-all($glb-tleft-radius,$glb-tright-radius,$glb-bleft-radius,$glb-bright-radius);
+	span {
+	 border-left: 1px solid #d8dbde;
+	 padding: 0 0.56em;
+	}
+}
+
+/* ISO or text and input */ 
+
+.text_input {
+	 input::-ms-clear {
+	 	display: none;
+	}
+	.default_input_field span {
+	 	color: $select-color;
+		padding-top: 0.31em;
+		padding-left: 0.75em;
+	 	background: unquote($white-bg);
+		float: right;
+		position: absolute;
+		right: 0.75em;
+		top: 0.56em;
+		z-index: 999;
+	}
+}
+
+/* Customized for SEPA */ 
+
+.form_fields {
+	&.message_field {
+	 	padding-bottom: 0.62em;
+	}
+}
+.select_message__type .default_input_field.has-options > input[type="text"], .no_input .default_input_field > input[type="text"]  {
+	width: 0px !important;
+	opacity: 0 !important;
+	cursor: pointer;
+	min-width:0 !important;
+  	max-width:0 !important;
+  	pointer-events:none;
+  	left:-5000px!important;
+}
+.select_message__structured, .select_message__freetext, .select_message__eurostructured {
+	margin-top: 0.94em;
+}
+
+/* Struct pattern input*/ 
+
+.lstruct_pattern {
+	/*padding-left: 0.75em; commented for the struct*/ 
+}
+.rstruct_pattern {
+	padding-right: 0.75em;
+	margin-left: -0.19em;
+}
+input.mask_pattern {
+	width: $structureMsg-width;
+	padding: 0.69em 0;
+	display: inline-block;
+	&::-ms-clear {
+		display: none;
+	}
+}
+
+/* Unwanted */ 
+
+.to_field {
+	.show_active {
+	 	display: inline-block !important;
+	}
+	.selected_amount {
+		display: none;
+	}
+}
+.selected_amount span:nth-child(2) {
+	margin-right: 0.31em;
+}
+
+// Unknown form need to be updated
+ 
+.unknown_alias, .unknown_input input {
+ 	width: $default-width;
+}
+.save_benefeciary {
+	padding: 0.62em 0;
+}
+.save_benefeciary__text {
+	margin-left: 0.25em;
+	font-size: 1em;
+}
+.unknown_labels {
+ 	@include light;
+	font-size: 1em;
+	padding-bottom: 0.62em;
+	display: block;
+}
+/*.fontcon-calendar {
+	z-index: 999 !important;
+	font-size: 1.37em;
+}*/
+.unknown_input .disabled {
+	color: #252429;
+}
+input:disabled {
+	-webkit-text-fill-color: #76767b;
+}
+
+.amount_field .default_input_field, .date_picker .default_input_field{
+	padding-right:3.1em;
+}
+
+.field_space{
+	padding: 0.84em 0 !important;
+}
+
+// 767px breakpoint
+@media all and (max-width: $screen-sm-max) {
+	.form_title {
+		font-size: 1.14em;
+	}
+	.form_fields{
+		padding-bottom:0.75em;
+	}
+	.form_labels{
+		width:100%;
+		padding:0 0 0.62em 0;
+	}
+	.form_inner {
+        padding: 0.62em;
+		h5 {
+			width: 100%;
+			padding-bottom: 0.87em;
+		}
+    }
+    .field_error .form_labels {
+        margin-top: 0;
+    }
+    .form_container .error_summary {
+        margin: 0;
+        width: 100%;
+    }
+    .field_space{
+		padding: 0 !important;
+	}
+}

@@ -1,0 +1,85 @@
+.accordionOption_header{
+	position:relative;
+}
+.action_group {
+ 	width: $default-width;
+	display: table;
+}
+.action_icons {
+	 position:absolute;
+	 right:16px;
+	 top:0.54em;
+}
+.action_content_icons{
+	float:right;
+	span{
+		padding:12px 0;
+	}
+}
+.action_icons__global {
+	font-size: 1.25em;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.5em 0 0.4em 0;
+	span{
+		border-right: 1px dotted #969696;
+		padding: 0 0.8em 0 0.8em;
+		
+	}
+	&.active{
+		background-color:#f8faf9;
+		border-bottom: 3px solid #f8faf9;
+		position: relative;
+		top: 1px;
+		span{
+			border:none;
+		}
+	}
+	&:last-child {
+		span{
+		  border: none;
+		 /* padding-right: 0;- removed for os specifi PDF issue*/
+		 padding-right:-0.8em;
+		}
+	}
+}
+.cards_transactions{
+	.action_icons {
+		top:20px;
+	}
+}
+
+// 768-1023
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max){
+	.fontcon-print, .innerPrint, .fontcon-csv{
+		display: none;
+	}
+}
+
+@media all and (max-width: $screen-sm-max) {
+	.fontcon-print, .innerPrint, .fontcon-csv{
+		display: none;
+	}
+	.action_icons {
+		 right:10px;
+	}
+	
+	.action_icons__global:last-child span{
+		    /*padding-right: 0;- removed for os specifi PDF issue*/
+		    padding-right:-0.8em; 
+	}
+	.dropdown-active + .action_icons.exp {
+	/* transaction list heading with icon / icon in second line for S screen */
+		/*background: #d1d8e2;
+		position: relative;
+		margin-top: -1px;*/
+		right: 0;
+		/*text-align: right;*/
+		top: 1px;
+	}
+	
+	.action_icons.exp .action_icons__global:last-child span {
+		padding-right: 0.8em;
+	}
+		
+}

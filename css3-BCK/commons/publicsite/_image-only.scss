@@ -1,0 +1,15 @@
+/* Image-only block starts */
+
+.image_only .block_container {
+  padding: 0;
+  .block_image {
+    width: $default-width !important;
+    background-position: 15% top !important;
+    &.right {
+      float: none;
+      margin: 0;
+    }
+  }
+}
+
+/* Image-only block Ends */

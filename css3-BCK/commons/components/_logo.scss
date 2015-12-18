@@ -1,0 +1,55 @@
+.site_logotype {
+	width: $logo-width;
+	height: $logo-parent-height;
+	float: left;
+}
+.brand_logo, #brandLogo {
+	 background: url(images/sprite.svg) no-repeat;
+	width: $logo-width;
+	height: $logo-height;
+	display: block;
+	position:absolute;
+	 background-position: $logo-position;
+}
+.no-svg {
+	 .brand_logo, #brandLogo {
+	  	background: url(images/sprite.png) no-repeat;
+	   	background-position: $logo-position;
+	}
+}
+
+// 1023
+
+@media all and (max-width: $screen-md-max) {
+	%extend_logo_M{
+		width: $logo-medium-width;
+		height: $logo-medium-height;
+	}
+	.site_logotype {
+		@extend %extend_logo_M;
+	}
+	.brand_logo, #brandLogo {
+		@extend %extend_logo_M;
+	}
+	#webbankingAuthenticated{
+		.brand_logo, #brandLogo{
+			pointer-events:none;
+		}
+	}
+}
+
+//767
+
+@media all and (max-width: $screen-sm-max){
+	%extend_logo_S{
+		width: $logo-small-width;
+		height: $logo-small-height;
+	}
+	.site_logotype {
+		@extend %extend_logo_S;
+		margin-left:1.25em;
+	}
+	.brand_logo, #brandLogo {
+		@extend %extend_logo_S;
+	}
+}

@@ -1,0 +1,49 @@
+/* Two coloumn block */
+
+.paragraph_two_column .detail_block .block_container, .paragraph_three_column .detail_block .block_container {
+  padding: 0;
+}
+
+.paragraph_two_column .block_container {
+  .block_image {
+    width: auto;
+    height: 16.875em;
+  }
+  .block_inner {
+    padding: 3.125em;
+  }
+}
+
+/* Three coloumn block */
+
+.paragraph_three_column {
+  .block_container {
+    .block_image {
+      width: auto;
+      height: 11em;
+    }
+    .block_inner {
+      padding: 1.5625em;
+    }
+  }
+  .block_btn {
+    max-width: $default-width;
+    a {
+      max-width: $default-width;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .paragraph_two_column .block_container .block_image {
+    height: 13.125em;
+  }
+  .paragraph_three_column .block_container .block_image {
+    height: 6.875em;
+  }
+  .paragraph_two_column .block_container .block_inner {
+    padding: 3.0625em;
+  }
+}

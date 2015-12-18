@@ -1,0 +1,476 @@
+@mixin light {
+	font-family: 'light', Arial;
+}
+@mixin regular {
+	font-family: 'regular', Arial;
+	font-weight: bold;
+}
+
+@mixin cond-light {
+	font-family: 'cond_light', arial;
+}
+@mixin cond-regular {
+	font-family: 'cond_regular', arial;
+}
+
+
+@font-face {
+	font-family: 'light';
+	src: url("fonts/Trebuchet-MS-light.eot");
+	src: url("fonts/Trebuchet-MS-light.eot?#iefix") format("eot"), url("fonts/Trebuchet-MS-light.woff") format("woff"), url("fonts/Trebuchet-MS-light.ttf") format("truetype"), url("fonts/Trebuchet-MS-light.svg#light") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'regular';
+	src: url("fonts/Trebuchet-MS-regular.eot");
+	src: url("fonts/Trebuchet-MS-regular.eot?#iefix") format("eot"), url("fonts/Trebuchet-MS-regular.woff") format("woff"), url("fonts/Trebuchet-MS-regular.ttf") format("truetype"), url("fonts/Trebuchet-MS-regular.svg#regular") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+//
+// Font icons for Fintro!!!
+//
+
+@font-face {
+	font-family: 'bnpiconfont';
+	src:url('fonts/bnpiconfont.eot');
+	src:url('fonts/bnpiconfont.svg#bnpiconfont') format('svg'),
+	    url('fonts/bnpiconfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/bnpiconfont.woff') format('woff'),
+		url('fonts/bnpiconfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="fontcon-"], [class*=" fontcon-"] {
+	font-family: 'bnpiconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.fontcon-extra:before {
+	content: "\e600";
+}
+
+.fontcon-cards:before {
+	content: "\e601";
+}
+
+.fontcon-hero-icon:before {
+	content: "\e602";
+}
+
+.fontcon-savings-account:before {
+	content: "\e603";
+}
+
+.fontcon-current-account:before {
+	content: "\e604";
+}
+
+.fontcon-transaction-out:before {
+	content: "\e605";
+}
+
+.fontcon-transaction-in:before {
+	content: "\e606";
+}
+
+.fontcon-calendar:before {
+	content: "\e607";
+}
+
+.fontcon-beneficiary:before {
+	content: "\e608";
+}
+
+.fontcon-send-money-icon:before {
+	content: "\e609";
+}
+
+.fontcon-circle-done:before {
+	content: "\e60a";
+}
+
+.fontcon-contactus:before {
+	content: "\e60c";
+}
+
+.fontcon-message:before {
+	content: "\e62f";
+}
+
+.fontcon-faq:before {
+	content: "\e60b";
+}
+
+.fontcon-menu-icon:before {
+	content: "\e60e";
+}
+
+.fontcon-logout:before {
+	content: "\e60f";
+}
+
+.fontcon-warning-active:before {
+	content: "\e610";
+}
+
+.fontcon-m1:before {
+	content: "\e611";
+}
+
+.fontcon-m2:before {
+	content: "\e612";
+}
+
+.fontcon-ucr-ok:before {
+	content: "\e613";
+}
+
+.fontcon-tick:before {
+	content: "\e614";
+}
+
+.fontcon-close:before {
+	content: "\e615";
+}
+
+.fontcon-search:before {
+	content: "\e616";
+}
+
+.fontcon-download:before {
+	content: "\e617";
+}
+
+.fontcon-print:before {
+	content: "\e618";
+}
+
+.fontcon-pdf:before {
+	content: "\e619";
+}
+
+.fontcon-csv:before {
+	content: "\e61a";
+}
+
+.fontcon-refresh:before {
+	content: "\e61b";
+}
+
+.fontcon-executed:before {
+	content: "\e61c";
+}
+
+.fontcon-not-executed:before {
+	content: "\e61d";
+}
+
+.fontcon-fav-default:before {
+	content: "\e61e";
+}
+
+/*.fontcon-fav-select:before {
+	content: "\e61f";
+}*/
+
+.fontcon-reload:before {
+	content: "\e620";
+}
+
+.fontcon-add-benf:before {
+	content: "\e621";
+}
+
+.fontcon-add:before {
+	content: "\e622";
+}
+
+.fontcon-link-intern-teaser:before {
+	content: "\e623";
+}
+
+.fontcon-timeout:before {
+	content: "\e624";
+}
+
+.fontcon-information:before {
+	content: "\e625";
+}
+
+.fontcon-information-active:before {
+	content: "\e626";
+}
+
+.fontcon-attention:before {
+	content: "\e627";
+}
+
+.fontcon-expire:before {
+	content: "\e628";
+}
+
+.fontcon-expand:before {
+	content: "\e629";
+}
+
+.fontcon-collapse:before {
+	content: "\e62a";
+}
+
+.fontcon-calendar-arrow-right:before {
+	content: "\e62b";
+}
+
+.fontcon-calendar-arrow-left:before {
+	content: "\e62c";
+}
+
+.fontcon-arrow-right:before {
+	content: "\e62d";
+}
+
+.fontcon-arrow-left:before {
+	content: "\e62e";
+}
+
+.fontcon-facebook:before {
+	content: "\e668";
+}
+
+.fontcon-twitter:before {
+	content: "\e669";
+}
+
+.fontcon-youtube:before {
+	content: "\e66a";
+}
+
+.fontcon-linkedin:before {
+	content: "\e60d";
+}
+
+.fontcon-clock:before {
+	content: "\e632";
+}
+
+.fontcon-emotion-unhappy:before {
+	content: "\e633";
+}
+
+.fontcon-simulator:before {
+	content: "\e635";
+}
+
+.fontcon-globe:before {
+	content: "\e636";
+}
+
+.fontcon-faq-active:before {
+	content: "\e637";
+}
+
+.fontcon-close-thin:before {
+	content: "\e638";
+}
+
+.fontcon-list:before {
+	content: "\e639";
+}
+
+.fontcon-remove:before {
+	content: "\e63a";
+}
+
+.fontcon-checkbox-unchecked:before {
+	content: "\e63c";
+}
+
+.fontcon-radio-unchecked:before {
+	content: "\e63e";
+}
+
+.fontcon-radio-checked:before {
+	content: "\e63f";
+}
+
+.fontcon-add-thin:before {
+	content: "\e640";
+}
+
+.fontcon-arrow-left-thin:before {
+	content: "\e641";
+}
+
+.fontcon-arrow-right-thin:before {
+	content: "\e642";
+}
+
+.fontcon-direction-arrow:before {
+	content: "\e643";
+}
+
+.fontcon-play:before {
+	content: "\e644";
+}
+
+.fontcon-doc:before {
+	content: "\e645";
+}
+
+.fontcon-ppt:before {
+	content: "\e646";
+}
+
+.fontcon-xls:before {
+	content: "\e647";
+}
+
+.fontcon-reply:before {
+	content: "\e648";
+}
+
+.fontcon-switch:before {
+	content: "\e64a";
+}
+
+.fontcon-shortcut:before {
+	content: "\e64b";
+}
+
+.fontcon-mail:before {
+	content: "\e64c";
+}
+
+.fontcon-arrow-down:before {
+	content: "\e64d";
+}
+
+.fontcon-arrow-up:before {
+	content: "\e64e";
+}
+
+.fontcon-guarantee:before {
+	content: "\e64f";
+}
+
+.fontcon-capital-guarantee:before {
+	content: "\e650";
+}
+
+.fontcon-risk:before {
+	content: "\e651";
+}
+
+.fontcon-conservative:before {
+	content: "\e652";
+}
+
+.fontcon-defensive:before {
+	content: "\e653";
+}
+
+.fontcon-neutral:before {
+	content: "\e654";
+}
+
+.fontcon-dynamic:before {
+	content: "\e655";
+}
+
+.fontcon-agressive:before {
+	content: "\e656";
+}
+
+.fontcon-duration:before {
+	content: "\e657";
+}
+
+.fontcon-costs:before {
+	content: "\e658";
+}
+
+.fontcon-calculator:before {
+	content: "\e659";
+}
+
+.fontcon-money-return:before {
+	content: "\e65a";
+}
+
+.fontcon-document:before {
+	content: "\e65b";
+}
+
+.fontcon-application:before {
+	content: "\e65c";
+}
+
+.fontcon-description:before {
+	content: "\e65d";
+}
+
+.fontcon-globe2:before {
+	content: "\e65e";
+}
+
+.fontcon-ecoleaf:before {
+	content: "\e65f";
+}
+
+.fontcon-currency:before {
+	content: "\e660";
+}
+
+.fontcon-mechanism:before {
+	content: "\e661";
+}
+
+.fontcon-branch-advisor:before {
+	content: "\e662";
+}
+
+.fontcon-cash-cards:before {
+	content: "\e663";
+}
+
+.fontcon-phone-banking:before {
+	content: "\e664";
+}
+
+.fontcon-mobile-reload:before {
+	content: "\e665";
+}
+
+.fontcon-graph-low:before {
+	content: "\e66b";
+}
+
+.fontcon-graph-medium:before {
+	content: "\e66c";
+}
+
+.fontcon-graph-high:before {
+	content: "\e66d";
+}
+
+.fontcon-pencil:before {
+	content: "\e649";
+}
+
+

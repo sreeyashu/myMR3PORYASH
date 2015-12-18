@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+.contact_widget{
+	background-color:#ffffff;
+}
+.wg_header h2{
+}
+.wg_header{
+	border-bottom: 1px solid #d8dbde;
+}
+.wg_content{
+
+}
+.wg_item{
+	border-bottom: 1px solid #d8dbde;
+}
+.wg_item:last-child{
+	border-bottom: none;
+}

@@ -1,0 +1,128 @@
+
+	.dropdown-menu{ 
+		background-color:#f7f7f7; 
+		top:130%; 
+		padding:0; 
+		border:1px solid #d1d1d1;
+		border-radius:0;
+		box-shadow:none !important;
+		&::after{
+			position:absolute;
+			content:"";
+			display:block;
+			width:0;
+			bottom:auto;
+			border-color:#f7f7f7 transparent; 
+			border-style:solid; 
+			left:5px;
+			border-width:0 6px 6px;
+			top:-6px;
+		}
+		&::before{
+			position:absolute;
+			content:"";
+			display:block;
+			width:0;
+			bottom:auto;
+			border-color:#d1d1d1 transparent;
+			border-style:solid;
+			left:4px;
+			border-width: 0 7px 7px;
+			top:-7px;
+		}
+		> li{
+			border-bottom:1px solid #d1d1d1;
+			padding:16px;
+			&:hover{
+				background-color:#ffffff;
+			}
+			&:last-child{
+				border-bottom:0;
+			}
+		}
+	}
+
+.extra{
+	position:relative;
+	&.dropdown{
+		display:inline-block;
+	}
+	.dropdown-toggle{
+		padding: 8px 9px;
+		background-color: rgb(184,194,207);
+		cursor: pointer;
+		display: inline-block;
+		line-height: 0;
+		.fontcon-extra:before{
+			font-size:12px;
+		}
+	}
+	&.open{
+		.dropdown-toggle{
+			background:#252429;
+			color:#ffffff;
+		}
+		.dropdown-menu{
+			display:table;
+		}
+	}
+	.dropdown-menu{
+		top:130%;
+		background-color:#252429;
+		max-width:300px;
+		right: 0;
+		left: auto;
+		&::after{
+			right:5px;
+			left:auto;
+			border-color:#252429 transparent;
+		}
+		&::before{
+			right:4px;
+			left:auto;
+			border-color:#252429 transparent;
+		}
+		> li{
+			color:#ffffff;
+			border-bottom:1px solid #424246;
+			&:hover{
+				background-color:#5c5b5f;
+			}
+		}
+	}
+	&.dropup{
+		.dropdown-menu{
+			margin: 0 0 6px !important;
+			&::after{
+			  	border-width: 6px 6px 0;
+			  	top: auto;
+			}
+			&::before{
+			  	border-width: 6px 6px 0;
+			  	top: auto;
+			}
+		}
+	}
+}
+@media all and (max-width: $screen-xs-max) {
+	.extra{
+		&.dropdown{
+			width: 100%;
+			.dropdown-menu{
+				min-width: 100%;
+			}
+		}
+	}
+}
+// Specific for List item header of accordion
+@media all and (max-width: $screen-sm-max) {
+	.list_item__header{
+		.extra.dropdown{
+			position:absolute;
+			right:0;
+			top:0.84em;
+		}
+	}
+}
+
+

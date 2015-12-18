@@ -1,0 +1,19 @@
+/* Hello icon */
+
+.hello_icon {
+	background: url(images/sprite.svg) no-repeat;
+	padding: 9px;
+	background-position: -190px -3px;
+	margin: -2px 0 0 2px;
+	display: none;
+	vertical-align: top;
+}
+.no-svg .hello_icon {
+	background: url(images/sprite.png) no-repeat;
+	background-position: -190px -3px;
+}
+
+@media (max-width: $screen-xs-max)
+{
+	.selected-item .hello_icon { margin-top: -4px; }
+}

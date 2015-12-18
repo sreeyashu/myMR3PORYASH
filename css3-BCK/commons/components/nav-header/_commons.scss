@@ -1,0 +1,137 @@
+.canvas_container{
+	@include transition(margin, 0.3s, ease);
+	position:relative;
+	@include clearfix;
+	background-color:#eef1f5;
+	-webkit-box-shadow: -9px 0 20px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: -9px 0 20px rgba(0, 0, 0, 0.7);
+	box-shadow: -9px 0 20px rgba(0, 0, 0, 0.7);
+}
+.header{
+	position:relative;
+	z-index:3;
+	top:0;
+	width:100%;
+	@include transition(all, 0.40s, ease);
+    @media all and (max-width:1023px){
+    	z-index:2;
+    }
+}
+// Scroll header behavior 
+.nav-up{
+	.header{ 
+		position:fixed;
+		top:-2.5em;
+		width:100%; 
+		left:0;
+	}
+	.nav_header{
+		height: 3.125em;
+		background-color: #f7f7f7; 
+		border-bottom:1px solid #d1d1d1;	
+	}
+	.nav_header_inner{
+		padding: 0.48em 1.875em 0 1.875em;
+	}
+	.navigation_menu{
+		position: relative;
+		top: -0.50em;
+		width:auto;
+		border: 0;
+		float: left;
+		> ul{
+			padding:0 0.9375em 0 8px;	
+		}
+	}
+	.mm_panel{
+		position:fixed; 
+		top:3.0625em; 
+		width:100%;
+	}
+	.site_logotype{
+		width:2.1875em; 
+		height:2.1875em;
+		@media (max-width: 1023px){
+			width:162px;
+			height:35px;
+		}
+		@media (max-width: 767px){
+			width:35px;
+			height:35px;
+		}
+	}
+	@media all and (min-width:1024px){
+		.notifications{ 
+			margin-left:0;
+			.notification_txt{ 
+				display:none;
+			}
+		}
+	}
+	.main_wrapper{
+		margin-top:142px;
+	}
+}
+
+//1023
+@media (max-width: 1023px){
+	.nav-up{
+		.header{
+			top:0;
+		}
+		.nav_header{height:3.75em;background-color:#ffffff;}
+		.nav_header_inner{ 
+			padding:0.75em 1.875em;
+		}
+	}
+}
+@media all and (max-width: 767px){
+	.nav-up{
+		.nav_header_inner{ 
+			padding:0.75em 0.625em;
+		}
+	}
+}
+// Small menu
+.nav_small{ 
+	display:none;
+	@media (max-width: 1023px){
+		display:block;
+	}
+}
+.hamburger_icon{ 
+	position:absolute; 
+	left:0; 
+	font-size:2.1875em; 
+	top:0.3429em; 
+	z-index:22; 
+	width:5.4286em; 
+	height:1em; 
+	cursor:pointer;
+	@media (max-width: 767px){
+		width:1.8572em;
+	}
+}
+
+
+.mm_cover, .cover{
+	content:"";
+	position:fixed; 
+	top:0; 
+	bottom:0; 
+	left:0; 
+	background-color:rgba(0,0,0,0.5); 
+	width:100%; z-index:2; display:none;
+	-webkit-transition: margin 0.4s ease;
+	-ms-transition: margin 0.4s ease;
+	transition: margin 0.4s ease;
+}
+@media all and (max-width:1023px){
+	.mm_cover{
+		z-index:-999;
+	}
+	.cover{
+		background:url(images/transparent.png);
+	}
+}
+

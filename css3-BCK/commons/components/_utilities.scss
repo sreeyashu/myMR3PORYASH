@@ -1,0 +1,88 @@
+// Utility classes
+// --------------------------------------------------
+
+
+// Toggling content
+// ----------------
+/* = clearfix */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: auto;
+}
+.clearfix{
+	@include clearfix;
+}
+.f_left {
+	float: left;
+}
+.f_right {
+	float: right;
+}
+.hide {
+	display: none !important;
+}
+.invisible{
+	visibility: hidden !important;
+}
+.show_active, .show {
+	display: block !important;
+}
+.show_inline {
+	display: inline !important;
+}
+.show_hello {
+	display: $hello-icon !important;;
+}
+.show_table {
+	display: table !important;
+}
+
+
+// Disabling div's, links, buttons
+// -------------------------------
+.disabled {
+	color: $select-color !important;
+	cursor: default;
+	&:hover, span{
+		text-decoration: none !important;
+	}
+}
+
+// Make text bold, underline the text
+// ----------------------------------
+.highlight_text {
+ 	@include regular;
+}
+.underline{
+	text-decoration:underline;
+}
+
+// Apply default border
+//
+.border_top{
+	border-top:1px solid $default-border-clr !important;
+}
+.bordered{border:1px solid $default-border-clr !important ;}
+
+// Apply text red color
+// --------------------
+.status_error {
+	color: $error-clr;
+}
+
+// iscroll reset for non iscroll elements
+// --------------------------------------
+.mobscroll, .no-scroll, .i-scroll{ 
+	overflow-y:scroll !important;
+	pointer-events:auto!important;
+	@include touch-action(auto !important);
+}
+
+// Remove animation 
+// ----------------
+.noanimation{
+	animation:none !important;
+	-webkit-animation:none !important;
+} 

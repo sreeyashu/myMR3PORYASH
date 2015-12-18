@@ -1,0 +1,121 @@
+/*cdu*/
+.contact_data_list {
+  .details_container {
+	width: $default-width;
+	vertical-align: top;
+	display: table-cell;
+	@include light;
+	display: table;
+	table-layout: fixed;
+  }
+  
+  .listitem_details {
+    width: $default-width;
+    float: left;
+  }
+  
+  .list_wrapper {
+    padding: 0;
+  }
+  
+  .list_item__header {
+    cursor: default;
+  }
+  
+  .inline_icon, .done_item {
+    margin: 3px 6px 0 0;
+  }
+  
+  .list_content_col1{
+	width: 85%;
+  }
+  
+  .list_content_details{
+	float: none;
+	width: 100%;
+	}
+	
+  .dropdown-backdrop {
+	 top: auto;
+	}
+  .notavailable{
+	  text-align: left;
+	  line-height: 1.1em;
+  }
+}
+
+.pad_bottom {
+  padding-bottom: 15px;
+}
+
+.message_icon {
+	margin: 6px 6px 0 0;
+	display: table-cell;
+	float: left;
+}
+
+.message_content {
+	display: table-cell;
+	padding-top: 6px;
+}
+
+.list_content_icon {
+  position: relative;
+}
+
+.contact_data_list .dropdown.extra {
+	display: table-cell;
+}
+
+.extra_popover {
+	  cursor: pointer;
+	  padding: 8px;
+	  outline: 0;
+	  background: $grey-background;
+	  margin-left: 10px;
+}
+.contactData .field_error .default_input_control{
+	padding-top:0px !important;
+}
+
+.contactData .details_label{
+	width: 33%;
+}
+
+.contactData .listitem_details{
+	width: 67%;
+}
+
+.list__inner {
+  padding: 1.87em;
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  word-break: break-word;
+  table-layout: fixed;
+} 
+
+
+@media (max-width: $screen-sm-max) {
+  .contact_data_list {
+    .inline_icon {
+      margin-top: 4px;
+    }
+}
+	.contact_data_list .list_item__header .dropdown{
+		position: absolute;
+		right: 0;
+		top: 10px;
+	}
+	
+	  .list__inner {
+    padding: 0.62em;
+  }
+}
+
+.contact_data_list .details_container h3{
+	max-width: 100;
+	overflow: hidden;
+	word-wrap: break-word;
+}

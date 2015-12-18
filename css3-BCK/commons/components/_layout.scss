@@ -1,0 +1,226 @@
+.ls-row {
+	float: left;
+ 	width: $default-width;
+}
+.main_wrapper {
+	margin-top: 3.25em;
+	position:relative;
+}
+.content_wrapper {
+	padding: 1.86em 1.86em 3.75em;
+	min-height: 38.5em;
+	max-width:80em;
+	margin: 0 auto;
+  	float: none;
+  	@include clearfix;
+}
+.content_col {
+ 	width: $default-width;
+	float: left;
+	margin-right: -20.3125em;
+}
+.fluid {
+	margin-right: 20.3125em;
+}
+.margin_col {
+	width: 18.75em;
+	margin-left: 1.5625em;
+	min-height: 0.13em;
+}
+.login_bg {
+	  min-height: 25em;
+	  position: relative;
+	  display: table;
+	  table-layout: fixed;
+		  a.faq {
+		    position: absolute;
+		    top: 250px;
+		    right: 1.88em;
+		  }
+		  .fontcon-faq {
+		    color: $icon-faq-clr;
+		    border: $border;
+		    font-size: $faq-font;
+		    border-radius: 25px;
+		    width: 42px;
+		    display: table-cell;
+		    height: 42px;
+		    text-align: center;
+		    vertical-align: middle;
+		    font-weight: $faq-weight;
+		    + p {
+		      display: none;
+		    }
+  	}
+}
+
+
+#login_overlayer {
+	min-height: 24em;
+}
+
+/*hack for IE9 jump in login*/
+.msie .login_bg.ls-row{
+	float:none;
+}
+
+
+// Margin column place holder
+// --------------------------
+.margin_col{ 
+	.ls-cmp-wrap{
+		margin-bottom:1.25em;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+// new type of two column for search
+// ----------------------------------
+/* heading with image */
+.fluid_heading {
+    margin-top: -1.86em;
+}
+.fluid_heading_inner {
+    height: 12.188em;
+    display: table-cell;
+    vertical-align: middle;
+}
+.fluid_heading h2 {
+    font-size: 4.063em;
+    color: unquote($white-clr);
+    line-height: 1;
+    @include color-rgba(0, 0, 0, 80%/100%);
+    float: left;
+    padding: 0.154em 0.231em;
+    font-family: 'cond_regular';
+}
+.fluid_block .header_bg_banner {
+    background: url(images/contact_us_banner.jpg) no-repeat;
+    min-height: 13.750em;
+    top: auto;
+    border: none;
+}
+.fluid_block_inner {
+    display: table;
+    width: 100%;
+}
+/* sidebar */
+.sidebar {
+    width: 18.75em;
+    float: left;
+    background: unquote($white-clr);
+    margin-top: 3.125em;
+}
+.sidebar_inner {
+    min-height: 0.13em;
+    padding: 1.25em;
+}
+.sidebar__inner {
+    padding: 0.938em 0.938em 0;
+}
+/* content block */
+.content{
+	margin-left: 20.3125em;
+	min-height: 0.13em;
+	background: unquote($white-clr);
+}
+
+
+//1023
+@media all and (max-width: $screen-md-max){
+	.main_wrapper {
+		margin-top: 0;
+	}
+	.nav-up{
+		.main_wrapper{
+			margin-top: 3.75em;
+		}
+	}
+	.margin_col{
+		width:100%;
+		margin-left:0;
+		margin-top:1.25em;
+		.ls-cmp-wrap{
+			width:50%;
+			float:left;
+			&:nth-child(even){
+				padding-left:0.62em;
+			}
+			&:nth-child(odd){
+				padding-right:0.62em;
+			}
+		}
+		.margin-ad, 
+		.teaser_module, 
+		.headline_picture img  {
+		  width: 300px;
+		  height: 170px;
+		  margin:0 auto;
+		}
+	}
+	
+	//new layout
+	.fluid_heading {
+    	margin-top: 0;
+	    h2 {
+	        font-size: 2.667em;
+	        padding: 0.119em 0.238em;
+	    }
+	}
+	.fluid_block .header_bg_banner {
+	    min-height: 6.250em;
+	}
+	.fluid_heading_inner {
+	    height: 5.625em;
+	    padding-left: 0.625em;
+	}
+	.sidebar {
+	    display: none;
+	}
+	.content {
+	    margin-left: 0;
+	}
+}
+
+// 767
+@media all and (max-width: 767px){
+	.margin_col{
+		padding:0 0.62em;
+	}
+}
+//639
+@media all and (max-width: 649px){
+	.margin_col{
+		margin-top:0.62em;
+		.ls-cmp-wrap{
+			width:100%;
+			margin-bottom:0.62em;
+			float:none;
+			padding:0 !important; /* nth child not working in android native */
+		}
+		.margin-ad, 
+		.teaser_module, 
+		.headline_picture img  {
+		  margin:0 auto;
+		}
+	}
+}
+
+// 1024
+@media all and (min-width: $screen-lg-min){
+
+	.login_bg {
+		min-height: 36em;
+	}
+	
+	#login_overlayer {
+		min-height: 19.5em;
+		margin-bottom: 15px;
+	}
+	
+	.content_wrapper {
+		min-height: 23.1em;
+	}
+}

@@ -1,0 +1,236 @@
+.card_slide {
+  .product_inner {
+    display: table;
+    height: 21.875em;
+  }
+  .product_btn {
+    width: 19.375em;
+    vertical-align: bottom;
+  }
+  .card_item_wrapper {
+    height: 21.875em;
+    width: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.card_item {
+  width: $default-width;
+  position: absolute;
+  bottom: -21.875em;
+  left: 310px;
+  right: 0;
+  max-height: 21.875em;
+  z-index: 0;
+}
+
+.card_item_1 {
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+}
+
+.card_item_2 {
+  left: 0;
+}
+
+.card_header {
+  padding: 0.938em;
+  background: $card-header-bg;
+  border-bottom: solid 1px $default-border-clr;
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+.card_slide .block_btn, .card_form {
+  width: $default-width;
+  padding: 2.250em;
+}
+
+.card_content {
+  background: unquote($white-bg);
+  min-height: 18.375em;
+}
+
+.card_item_1 .card_content {
+  min-height: 0;
+}
+
+.card_back {
+  float: left;
+  font-size: 1.125em;
+  cursor: pointer;
+  margin-right: 0.556em;
+  margin-top: -0.667em;
+  margin-left: -0.278em;
+  width: 2.778em;
+  height: 2.778em;
+  text-align: center;
+  i {    
+    position: relative;
+    top: 0.45em;
+    line-height: 1.900em;
+  }
+}
+
+.card_form .block_btn {
+  padding: 0 0 0.625em 0;
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.card_content .block_btn a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card_form {
+  .span_12_pull_both {
+    margin-bottom: 0.625em;
+  }
+ .block_btn .btn_default {
+    margin: 0;
+    line-height: 3em;
+    min-width: 90px;
+  }
+}
+
+.card_slide .datepicker {
+  width: $default-width;
+  height: $default-height;
+  > div, table {
+    width: $default-width;
+    height: $default-height;
+  }
+}
+
+.icon_date_hour {
+  position: absolute;
+  right: 0.625em;
+  top: 0.333em;
+  font-size: 1.5em;
+  background: unquote($white-bg);
+  padding-left: 0.208em;
+  color: unquote($inverse-clr);
+}
+
+.cta_card_slideUpward, .cta_slideForward, .cta_card_slideUpward *, .cta_slideForward * {
+  cursor: pointer;
+}
+
+#card_hour_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card_hour_picker {
+  li {
+    padding: 0.625em 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border-bottom: solid 1px $card-time-border;
+  }
+  .card_hour_header {
+    @include regular;
+    padding: 0.625em 0;
+    border-bottom: solid 1px $card-time-border;
+  }
+  li:hover {
+    background: $hover-bg;
+    color: unquote($white-clr);
+  }
+  span {
+    width: 15%;
+    text-align: center;
+    display: inline-block;
+    &:first-child, &:last-child {
+      width: 40%;
+    }
+  }
+}
+
+/* Card Slide Ends */
+@media (max-width: 1023px) {
+	.card_slide .block_btn {		
+	  padding: 1.563em;
+	}
+	.card_form .block_btn {
+	  padding: 0 0 0.625em 0;
+	}
+}
+
+@media (max-width: 767px) {
+  /* Card Slide Starts */
+  .card_slide {
+    .product_inner {
+      width: $default-width;
+      display: table;
+    }
+    .product_heading {
+      height: 24.563em;
+      padding: 0 0.625em 0;
+    }
+    .product_heading_small {
+      display: table-cell;
+      vertical-align: bottom;
+      padding-bottom: 2.500em;
+      padding-right: 0.625em;
+    }
+    .product_btn {
+      display: table-row;
+      width: $default-width;
+      height: auto;
+      .card_item_wrapper {
+	   	margin-top: 2.125em;
+	   }
+	   &.cardSlided .card_item_wrapper {
+	    margin-top: 2.750em;
+	   }
+    }
+    height: auto;
+    display: table;
+    width: $default-width;
+  }
+  .card_item .block_btn a {
+    text-align: center;
+  }
+  .card_slide .card_item_1 .btn_primary {
+    display: none;
+  }
+  .card_item_1 {
+    .card_content {
+      background: none;
+    }
+    .block_btn {
+      padding: 0.625em 0.625em 0.313em;
+      background: none;
+      a {
+        margin-bottom: 0.625em;
+      }
+    }
+  }
+  .card_form .block_btn {
+    padding: 1.563em 0;
+  }
+  /* Card Slide Ends */
+}
+
+@media (max-width: 480px) {
+  /* Card Slide Starts */
+  .card_content .span_6 {
+    width: 51% !important;
+    padding-right: 0.625em;
+    &:last-child {
+      width: 49% !important;
+      padding-right: 0;
+    }
+  }
+  /* Card Slide Ends */
+}

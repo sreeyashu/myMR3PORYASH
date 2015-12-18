@@ -1,0 +1,339 @@
+/* Splash Page Starts */
+
+.splash_header {
+  background: rgba(255, 255, 255, 0.6);
+  width: $default-width;
+  height: 5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+    .brand_logo {
+    background: url('../web-banking/images/sprite.svg') no-repeat;
+    background-position: -1px 1px;
+    width: 11.7em;
+    height: 3em;
+    display: block;
+    margin: 1em auto;
+    position: relative;
+  }
+  
+}
+
+.splash-wrapper {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: $default-width;
+  height:  $default-height;
+  position: absolute;
+  background: url('images/map_asset_72dpi.jpg') no-repeat top center;
+  background-size: 100% auto;
+  display:table;
+}
+
+.splash-container {
+  position: relative;
+  max-width: 25.000em;
+  margin: 0 auto;
+  padding: 10em 0 5em 0;
+  &:before {
+    /*content: " ";*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: $default-width;
+    height: 2px;
+    background: $splash-bg;
+    border-radius: 20% / 50%;
+    box-shadow: 0 0 16px 9px #d9d9d9;
+  }
+}
+
+.splash-menu {
+  > li {
+    background: $primarycolor;
+    border: none;
+    border-bottom: 1px solid $splash-border;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:last-child {
+      border: 0;
+    }
+    &.active {
+      background: $splash-list-bg;
+    }
+  }
+  .panel-title {
+    display: table;
+    width: $default-width;
+    max-width: $default-width;
+    table-layout: fixed;
+	line-height: 1.1;
+  }
+  > li a {
+    padding: 1.000em;
+    display: block;
+    color: unquote($white-clr);
+    position: relative;
+    text-decoration: none;
+    font-size: 1.250em;
+    height: 3.750em;
+    display: table-cell;
+    width: $default-width;
+    vertical-align: middle;
+    @include light;
+    &:visited, &:hover, &:active {
+      padding: 1.000em;
+      display: block;
+      color: unquote($white-clr);
+      position: relative;
+      text-decoration: none;
+      font-size: 1.250em;
+      height: 3.750em;
+      display: table-cell;
+      width: $default-width;
+      vertical-align: middle;
+      @include light;
+    }
+  }
+  span {
+    &.title {
+      clear: both;
+      max-width: 90%;
+      display: block;
+      word-wrap: break-word;
+    }
+    &.small-title {
+      clear: both;
+      max-width: 90%;
+      display: block;
+      word-wrap: break-word;
+      padding-top: 0.417em;
+      font-size: 0.600em;
+    }
+  }
+  li ul {
+    display: none;
+    position: relative;
+    background: $splash-list-bg;
+    padding: 0 1.250em;
+    min-width: 9.375em;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2.188em;
+      left: -0.375em;
+      border-left: 12px solid $splash-list-border;
+      border-top: 12px solid transparent;
+      z-index: 1;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  ul li {
+    padding: 0;
+    border-bottom: 1px solid $splash-bottom-border;
+    cursor: pointer;
+    a {
+      font-size: 1.000em;
+      padding: 0.750em 0;
+      color: unquote($white-clr);
+      max-width: 6.250em;
+      word-wrap: break-word;
+      height: auto;
+      &:visited, &:hover, &:active {
+        font-size: 1.000em;
+        padding: 0.750em 0;
+        color:unquote($white-clr);
+        max-width: 6.250em;
+        word-wrap: break-word;
+        height: auto;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  li.active ul {
+    display: block;
+  }
+  .panel {
+    margin-bottom: 0;
+    .panel-body {
+      padding: 0 0 0 2.813em;
+      position: absolute;
+      top: 0;
+      right: -8.750em;
+      z-index: 555;
+      opacity: 0;
+      -webkit-transition: opacity 0.4s ease-in-out, right 0.2s ease-in-out;
+      -moz-transition: opacity 0.4s ease-in-out, right 0.2s ease-in-out;
+      -ms-transition: opacity 0.4s ease-in-out, right 0.2s ease-in-out;
+      -o-transition: opacity 0.4s ease-in-out, right 0.2s ease-in-out;
+      transition: opacity 0.4s ease-in-out, right 0.2s ease-in-out;
+    }
+    &.active .panel-body {
+      right: -11.875em;
+      opacity: 1;
+    }
+    .panel-heading {
+      padding: 0;
+      border-bottom: solid 1px $panel-heading-border;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+  .collapse {
+    display: block;
+    visibility: visible;
+  }
+  a span {
+    &.fontcon-calendar-arrow-right, &.fontcon-expand {
+      font-size: 0.800em;
+      float: right;
+      width: auto;
+      height: auto;
+      position: absolute;
+      right: 1.563em;
+      display: block;
+      top: 40%;
+    }
+  }
+  .active span.fontcon-calendar-arrow-right, a span.fontcon-expand {
+    display: none;
+  }
+}
+
+/* Splash Page Ends */
+@media (max-width: 1023px) {
+  /* Splash Page Starts */
+  .splash-container {
+    max-width: 360px;
+  }
+  /* Splash Page Ends */
+}
+
+@media (max-width: 767px) {
+  /* Splash Page Starts */
+  .splash-wrapper {
+    background: none;
+    top: 5em;
+    height: auto;
+  }
+  .splash-container {
+    &:before {
+      display: none;
+    }
+    max-width: $default-width;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .splash-menu {
+    .active .panel-heading a {
+      background: #007d51;
+      background: -moz-linear-gradient(top, #007d51 0%, #2f9663 47%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #007d51), color-stop(47%, #2f9663));
+      background: -webkit-linear-gradient(top, #007d51 0%, #2f9663 47%);
+      background: -o-linear-gradient(top, #007d51 0%, #2f9663 47%);
+      background: -ms-linear-gradient(top, #007d51 0%, #2f9663 47%);
+      background: linear-gradient(to bottom, #007d51 0%, #2f9663 47%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007d51', endColorstr='#2f9663',GradientType=0 );
+    }
+    li ul {
+      display: block;
+      padding: 0 1.875em;
+    }
+    .panel .panel-body {
+      position: relative;
+      top: 0;
+      right: 0 !important;
+      padding: 0;
+      margin: 0;
+    }
+    ul:before, li ul:before {
+      content: '';
+      display: none;
+    }
+    ul li {
+      padding: 0;
+      a {
+        padding: 1.250em 0;
+        color: unquote($white-clr);
+        width: $default-width;
+        max-width: 100%;
+        display: block;
+        &:visited, &:hover, &:active {
+          padding: 1.250em 0;
+          color: unquote($white-clr);
+          width: $default-width;
+          max-width: 100%;
+          display: block;
+        }
+      }
+    }
+    .collapse {
+      display: none;
+      visibility: hidden;
+      &.in {
+        display: block;
+        visibility: visible;
+      }
+    }
+    .active span.fontcon-calendar-arrow-right, a span.fontcon-expand {
+      display: none;
+    }
+    .active span.fontcon-expand, a span.fontcon-calendar-arrow-right {
+      display: block;
+    }
+    .active span.fontcon-expand {
+      right: 1.125em;
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    a span.fontcon-calendar-arrow-right {
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  /* Splash Page Ends */
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {}
+
+/* Retina support Starts */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .splash-wrapper {
+    background: url('images/map_asset_144dpi.jpg') no-repeat top center;
+    background-size: 100% auto;
+  }
+}
+
+/* Retina support Ends */

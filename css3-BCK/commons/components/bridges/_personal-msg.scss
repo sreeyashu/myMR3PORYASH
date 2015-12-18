@@ -1,0 +1,128 @@
+.personal_msg .module_title{
+	float: none;
+}
+.unread_list {
+	border-left: 2px solid $primarycolor;
+	.list_heading {
+		@include regular;
+	}
+}
+.two_block_col {
+	overflow: hidden;
+}
+.two_block_col_content {
+	width: $default-width;
+	display: table;
+	position: relative;
+}
+.two_block_col1_content {
+	background: unquote($white-clr);
+	display: table-cell;
+	width: 320px;
+	border-right: 1px solid $default-border-clr;
+	vertical-align: top;
+}
+.two_block_col2_content {
+	background: unquote($white-clr);
+	display: table-cell;
+}
+.selected_list_item {
+	background: $hover;
+	.list_heading {
+		color: unquote($white-clr);
+	}
+	.time_stamp {
+		color: unquote($white-clr);
+	}
+}
+.time_stamp {
+	color: $select-color;
+	font-size: 0.87em;
+	padding-top: 0.625em;
+	line-height: 1.49em;
+}
+.block1_lists {
+	padding-left: 30px;
+}
+.block1_list_item {
+	display: table;
+	width: $default-width;
+}
+.block1_list_wrapper_inner {
+	padding: 1.25em 1.25em 1.25em 0.625em;
+	border-bottom: 1px solid $default-border-clr;
+	cursor: pointer;
+}
+.list_heading {
+	@include light;
+	color: $primarycolor;
+}
+.selection_lists {
+	display: table;
+	width: $default-width;
+	height: $default-height;
+	display: none;
+}
+.selection_list_count {
+	text-align: center;
+	margin-top: 5em;
+	.fontcon-mail {
+		font-size: 40px;
+		color: $icon4-clr;
+	}
+}
+.block2_heading_inner {
+	padding-bottom: 20px;
+	display: table;
+	width: $default-width;
+}
+.list_item_details {
+	padding-bottom: 1.25em;
+}
+.block2_row {
+	border-bottom: 1px solid $default-border-clr;
+	display: none;
+}
+@media all and(max-width: $screen-sm-max) {
+	.two_block_col1_content {
+		width: $default-width;
+		display: block;
+		float: left;
+		position: relative;
+		border: none;
+	}
+	.two_block_col2_content {
+		width: $default-width;
+		display: none;
+		float: right;
+		position: relative;
+		border: none;
+		margin-left: 0;
+		top: 0;		
+	}
+	.back_link {
+		display: block;
+	}
+	.block1_list_wrapper_inner {
+		padding-left: 20px;
+	}
+	.block1_lists {
+		padding-left: 0;
+	}
+	.block2_heading {
+		padding-top: 10px;
+	}
+	.block1_list_item .css-label {
+		display: none!important;
+	}
+	
+	.personal_msg .h_col.exp {
+		width: 80%;
+		+ .h_col {
+			width: 20%;
+	}
+}
+}
+.block1_list_wrapper:hover h3 {
+	text-decoration: underline;
+}

@@ -1,0 +1,91 @@
+.centered_block{
+	width:43.75em;
+	margin:0 auto;
+}
+
+// Action navigation blocks columns and rows variations simple
+.action_blocks{
+	display:table;
+	h2{
+		font-family:'regular', Arial;
+		font-size:1.12em;
+		line-height:1.12em;
+		margin-bottom:1.25em;
+	}
+	p{
+		line-height:1.20em;
+		margin-bottom:1.25em;
+		text-align:justify;	
+	}
+	&.column{ 
+		.block{
+			width:50%;
+			float:left;
+			margin-top:1.87em;
+			&:nth-child(2){
+				margin-top:0;
+			}
+			&:nth-child(odd){
+				padding-right:1.87em;
+			}
+			&:nth-child(even){
+				padding-left:1.87em;
+			}
+		}
+		a.btn_default{
+			width:100%;
+		}
+	}
+	&.row{
+		.block{
+			width:100%;
+			float:none;
+			margin-top:1.87em;
+		}
+	}
+	// With borders
+	&.border{
+		.block{
+			div{
+				border:1px solid #d8dbde;
+				padding:0.94em;
+			}
+			&:nth-child(odd){
+				padding-right:0.94em;
+			}
+			&:nth-child(even){
+				padding-left:0.94em;
+			}
+		}
+	}
+	.block{
+		&:first-child{margin-top:0;}
+	}
+}
+
+@media all and (max-width:$screen-sm-max){
+	.centered_block{
+		width:100%;
+	}
+	.action_blocks{
+		&.column{
+			.block{
+				width:100%;
+				padding:0 !important;
+				&:nth-child(2){
+					margin-top:1.87em;
+				}
+			}
+			button{
+				width:auto;
+			}
+		}
+		h2, p{
+			height:auto!important;
+			margin-bottom:0.62em;
+		}
+	}
+   .wcm-landing .action_blocks.column .block:first-child {
+    margin-top: 1.25em;
+  }
+}
