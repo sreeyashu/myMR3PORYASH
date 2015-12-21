@@ -36,6 +36,12 @@ $(document).ready(function() {
 		}
 	});
 	
-	
+	$(document).on('mousedown', function(e){
+		if($(e.target).parents('.switcher').length === 0 && $('.switcher').hasClass('active')){
+				$('.switcher_content').hide();
+				$('.switcher').removeClass('active');
+				$('html').removeClass('no_scroll');
+		}
+	})
 	
 });
