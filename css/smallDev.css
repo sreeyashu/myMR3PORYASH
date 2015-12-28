@@ -8,9 +8,9 @@ p.push_screen_Icon{ font-size:42px; margin-top:53px; margin-bottom:13px;}
 
 
 .hide_onsmall_CTA{ position:fixed; bottom:0; width:100%; background-color:#ffffff;}
-.hide_onsmall_CTA button{ width:50%; font-size:1em; float:left; font-family:regular; padding:20px 10px;border-right: 1px solid #e5e5e5; height:84px; cursor:pointer;}
-.hide_onsmall_CTA button:last-child{ border:none;}
-.hide_onsmall_CTA button p{ margin-bottom:8px}
+.hide_onsmall_CTA a{ width:50%; font-size:1em; float:left; font-family:regular; padding:20px 10px;border-right: 1px solid #e5e5e5; height:84px; cursor:pointer;}
+.hide_onsmall_CTA a:last-child{ border:none;}
+.hide_onsmall_CTA a p{ margin-bottom:8px}
 .hide_onsmall_CTA .icon2_hideS{ font-size:18px;}
 
 
