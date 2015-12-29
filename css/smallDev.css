@@ -1,23 +1,36 @@
-.hide_onsmall{position:fixed; height:100%; top:60px; left:0; width:100%; z-index:10;text-align:center; background:#e5e5e5; overflow:scroll; padding-bottom:164px;}
-.hide_onsmall_content{ background:#00965e; height:195px; width:100%;color:#ffffff; text-transform: uppercase; line-height:1.11;}
-.hide_onsmall_content p{ font-size:14px; padding:0 60px}
+.alt_screen{position:fixed; height:100%; top:60px; left:0; width:100%; z-index:10;text-align:center; background:#e5e5e5; overflow:scroll; padding-bottom:164px;}
+.alt_screen_content{ background:#00965e; height:195px; width:100%;color:#ffffff; text-transform: uppercase; line-height:1.11;}
+.alt_screen_content p{ font-size:14px; padding:0 60px; font-family:regular}
 p.push_screen_Icon{ font-size:42px; margin-top:53px; margin-bottom:13px;}
-.hide_onsmall_or{ background-color:#1ea360; border-radius:20px; font-size:14px;padding:8px 9px; color:#fff; position:relative; top:-8px;}
-.hide_onsmall_img a{ width:161px; height:48px; margin:0 auto;margin-top:7px; display:block;}
-.hide_onsmall_img img{ width:100%; height:100%;}
+.alt_screen_or{ background-color:#1ea360; border-radius:20px; font-size:14px;padding:8px 9px; color:#fff; position:relative; top:-8px;}
+.alt_screen_img a{ width:161px; height:48px; margin:0 auto;margin-top:7px; display:block;}
+.alt_screen_img img{ width:100%; height:100%;}
 
 
-.hide_onsmall_CTA{ position:fixed; bottom:0; width:100%; background-color:#ffffff;}
-.hide_onsmall_CTA a{ width:50%; font-size:1em; float:left; font-family:regular; padding:20px 10px;border-right: 1px solid #e5e5e5; height:84px; cursor:pointer;}
-.hide_onsmall_CTA a:last-child{ border:none;}
-.hide_onsmall_CTA a p{ margin-bottom:8px}
-.hide_onsmall_CTA .icon2_hideS{ font-size:18px;}
-
-
-
+.alt_screen_CTA{ position:fixed; bottom:0; width:100%; background-color:#ffffff;}
+.alt_screen_CTA a{ width:50%; font-size:1em; float:left; font-family:regular; padding:20px 10px;border-right: 1px solid #e5e5e5; height:84px; cursor:pointer;}
+.alt_screen_CTA a:last-child{ border:none;}
+.alt_screen_CTA a p{ margin-bottom:8px}
+.alt_screen_CTA .icon2_hideS{ font-size:18px;}
 
 
 
 
 
-html{ overflow:hidden;}
+
+
+
+
+/*.pimped - altscreen_onS
+.pimp_link - altscreen_onS_link*/
+
+
+@media all and (max-width: 594px), all and (min-width: 595px) and (max-width: 767px) and (orientation: landscape) {
+	html{ overflow:hidden;}
+	.alt_screen {
+		display: block !important;
+	}
+	.altscreen_onS .shortcut_links, .altscreen_onS .mm_title.mm_next, .altscreen_onS .mm_prev_view, .altscreen_onS_link, .content_wrapper  {
+		display: none !important;
+	}
+}

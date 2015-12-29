@@ -14036,25 +14036,6 @@ div#success_block {
     text-align: right;
   }
 }
-@media all and (max-width: 594px), all and (min-width: 595px) and (max-width: 767px) and (orientation: landscape) {
-  .pimped .pimp_view {
-    display: block !important;
-  }
-  .pimped .shortcut_links, .pimped .mm_title.mm_next, .pimped .mm_prev_view {
-    display: none !important;
-  }
-
-  .pimp_link {
-    display: none !important;
-  }
-
-  .pimped-module .content_col {
-    display: none;
-  }
-  .pimped-module .alert_messages {
-    display: block !important;
-  }
-}
 /* new structure */
 /* list group */
 .list_group, .list_item_group {
