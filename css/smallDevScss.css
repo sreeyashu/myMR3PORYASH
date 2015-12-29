@@ -1,3 +1,6 @@
+.altbtn_onS{
+	display:none;
+}
 .alt_screen{
 	position:fixed;
 	height:100%; 

@@ -27,7 +27,7 @@ p.push_screen_Icon{ font-size:42px; margin-top:53px; margin-bottom:13px;}
 
 @media all and (max-width: 594px), all and (min-width: 595px) and (max-width: 767px) and (orientation: landscape) {
 	html{ overflow:hidden;}
-	.alt_screen {
+	.alt_screen, .altbtn_onS {
 		display: block !important;
 	}
 	.altscreen_onS .shortcut_links, .altscreen_onS .mm_title.mm_next, .altscreen_onS .mm_prev_view, .altscreen_onS_link, .content_wrapper  {
