@@ -21,8 +21,8 @@ p.push_screen_Icon{ font-size:42px; margin-top:53px; margin-bottom:13px;}
 
 
 
-/*.pimped - altscreen_onS
-.pimp_link - altscreen_onS_link*/
+/*.pimped - altgrp_onS
+.pimp_link - altgrp_onS_link*/
 
 
 @media all and (max-width: 594px), all and (min-width: 595px) and (max-width: 767px) and (orientation: landscape) {
@@ -30,7 +30,7 @@ p.push_screen_Icon{ font-size:42px; margin-top:53px; margin-bottom:13px;}
 	.alt_screen, .altbtn_onS {
 		display: block !important;
 	}
-	.altscreen_onS .shortcut_links, .altscreen_onS .mm_title.mm_next, .altscreen_onS .mm_prev_view, .altscreen_onS_link, .content_wrapper  {
+	.altgrp_onS .shortcut_links, .altgrp_onS .mm_title.mm_next, .altgrp_onS .mm_prev_view, .altgrp_onS_link, .content_wrapper  {
 		display: none !important;
 	}
 }
